@@ -1,6 +1,6 @@
 clear
 close all
-         
+
 
 %% process the txt --> matlab table (different from matrices!)
 
@@ -46,7 +46,9 @@ X = data{:,3:end}; % all but name and id
 [N,M] = size(X);
 % note that {} are used instead of () to not keep the 'table' data type
 
-
+% matrix of only input arguments (excluding the fuel consumption)
+Y = data{:,4:end};
+[Ny,My] = size(Y);
 
 
 %% clean up workspace
