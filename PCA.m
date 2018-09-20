@@ -25,7 +25,7 @@ corrmaty = corr(Y);
 varplot = figure('Position',[0 0 800 600],'visible','off');
 hold on
 plot( 0:M, [0; cumsum(diag(D) / trace(corrmat)) ], '-o')
-plot( 0:M-1, [0; cumsum(diag(Dy) / trace(corrmaty)) ], '-o')
+plot( 0:M-1, [0; cumsum(diag(Dy) / trace(corrmaty)) ], '-x')
 hold off
 title('Variance Explaned')
 xlabel('Number of Principal Components')
@@ -47,8 +47,8 @@ Y3 = Y(Y(:, end) == 3, :);
 prinplot12 = figure('Position',[0 0 800 600],'visible','off');
 hold on
 plot( (X1-mean(X1)) * P(:,1), (X1-mean(X1)) * P(:,2), 'o')
-plot( (X2-mean(X2)) * P(:,1), (X2-mean(X2)) * P(:,2), 'o')
-plot( (X3-mean(X3)) * P(:,1), (X3-mean(X3)) * P(:,2), 'o')
+plot( (X2-mean(X2)) * P(:,1), (X2-mean(X2)) * P(:,2), 'x')
+plot( (X3-mean(X3)) * P(:,1), (X3-mean(X3)) * P(:,2), '*')
 hold off
 grid on
 title('Princial Component Analysis -- First 2 components')
@@ -61,8 +61,8 @@ saveas(prinplot12, strcat('Plots/1stPrin-2ndPrin.eps'),'epsc')
 prinplot1out  = figure('Position',[0 0 800 600],'visible','off');
 hold on
 plot( (Y1-mean(Y1)) * Py(:,1), X1(:,1), 'o')
-plot( (Y2-mean(Y2)) * Py(:,1), X2(:,1), 'o')
-plot( (Y3-mean(Y3)) * Py(:,1), X3(:,1), 'o')
+plot( (Y2-mean(Y2)) * Py(:,1), X2(:,1), 'x')
+plot( (Y3-mean(Y3)) * Py(:,1), X3(:,1), '*')
 hold off
 grid on
 title('Princial Component Analysis -- Output vs first component')
@@ -76,8 +76,8 @@ saveas(prinplot1out, strcat('Plots/1stPrin-Output.eps'),'epsc')
 prinplot12out = figure('Position',[0 0 800 600],'visible','off');
 hold on
 plot3( (Y1-mean(Y1)) * Py(:,1), (Y1-mean(Y1)) * Py(:,2), X1(:,1), 'o')
-plot3( (Y2-mean(Y2)) * Py(:,1), (Y2-mean(Y2)) * Py(:,2), X2(:,1), 'o')
-plot3( (Y3-mean(Y3)) * Py(:,1), (Y3-mean(Y3)) * Py(:,2), X3(:,1), 'o')
+plot3( (Y2-mean(Y2)) * Py(:,1), (Y2-mean(Y2)) * Py(:,2), X2(:,1), 'x')
+plot3( (Y3-mean(Y3)) * Py(:,1), (Y3-mean(Y3)) * Py(:,2), X3(:,1), '*')
 hold off
 grid on
 title('Princial Component Analysis -- Output vs first 2 components')
