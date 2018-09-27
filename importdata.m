@@ -1,12 +1,6 @@
 clear
 close all
-<<<<<<< HEAD
-%testtest
          
-=======
-
->>>>>>> master
-
 %% process the txt --> matlab table (different from matrices!)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

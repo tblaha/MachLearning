@@ -16,6 +16,4 @@ histplot=histogram(Year);
 title('Car model year')
 xlabel('Year manufactured')
 ylabel('Amount of cars')
-ylim([0,45]);
-xlim([69,83]);
-saveas(histplot, strcat('Plots/histplot.eps'),'epsc')
+saveas(v, strcat('Plots/varplot.eps'),'epsc')
