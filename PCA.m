@@ -12,20 +12,26 @@ importdata
 [~,D_raw] = eig((X-mean(X))'*(X-mean(X))); % raw eigenvalues from the var-covar matrix
 sigmas = sort(diag(D_raw), 'desc'); % sorted eigenvalues
 
-corrmat  = corr(X);   % variance normalized variance covariance matrix (correlation matrix)
-[P,D]    = eig(corrmat); % eigenvectors (P) and eigenvalues diag(D) or the corr mat
 
-corrmaty = corr(Y);
-[Py,Dy]  = eig(corrmaty);
+[Ux,Dx,Px]  = svd( ( (X-mean(X)) ./ std(X) ) );
+[Uy,Dy,Py]  = svd( ( (Y-mean(Y)) ./ std(Y) ) );
+
+
 
 
 
 %% plots
+
+%%%%%%
+%%% TODO: all fonts bigger!
+%%%%%%
+
+
 % plot variance explaination plot
 varplot = figure('Position',[0 0 800 600],'visible','off');
 hold on
-plot( 0:M, [0; cumsum(diag(D) / trace(corrmat)) ], '-o')
-plot( 0:M-1, [0; cumsum(diag(Dy) / trace(corrmaty)) ], '-x')
+plot( 0:M, [0; cumsum(diag(Dx) / trace(Dx(1:8,1:8))) ], '-o')
+plot( 0:M-1, [0; cumsum(diag(Dy) / trace(Dy(1:7,1:7))) ], '-x')
 hold off
 title('Variance Explaned')
 xlabel('Number of Principal Components')
@@ -42,13 +48,19 @@ X3 = X(X(:, end) == 3, :);
 Y1 = Y(Y(:, end) == 1, :);
 Y2 = Y(Y(:, end) == 2, :);
 Y3 = Y(Y(:, end) == 3, :);
+Uy1 = Uy(Y(:, end) == 1, :);
+Uy2 = Uy(Y(:, end) == 2, :);
+Uy3 = Uy(Y(:, end) == 3, :);
+Ux1 = Ux(X(:, end) == 1, :);
+Ux2 = Ux(X(:, end) == 2, :);
+Ux3 = Ux(X(:, end) == 3, :);
 
 % plot 1st and 2nd principal components of corr(X)
 prinplot12 = figure('Position',[0 0 800 600],'visible','off');
 hold on
-plot( (X1-mean(X1)) * P(:,1), (X1-mean(X1)) * P(:,2), 'o')
-plot( (X2-mean(X2)) * P(:,1), (X2-mean(X2)) * P(:,2), 'x')
-plot( (X3-mean(X3)) * P(:,1), (X3-mean(X3)) * P(:,2), '*')
+plot( Ux1*Dx(:,1), Ux1*Dx(:,2), 'o')
+plot( Ux2*Dx(:,1), Ux2*Dx(:,2), 'x')
+plot( Ux3*Dx(:,1), Ux3*Dx(:,2), '*')
 hold off
 grid on
 title('Princial Component Analysis -- First 2 components')
@@ -58,17 +70,22 @@ legend('American', 'European', 'Asian')
 saveas(prinplot12, strcat('Plots/1stPrin-2ndPrin.eps'),'epsc')
 
 % plot 1st principal components of corr(Y) and output
+% find regression of PCA1 vs output
+A = [ones([Ny,1]), Uy*Dy(:,1) ];
+b1 = A\X(:,1);
 prinplot1out  = figure('Position',[0 0 800 600],'visible','off');
 hold on
-plot( (Y1-mean(Y1)) * Py(:,1), X1(:,1), 'o')
-plot( (Y2-mean(Y2)) * Py(:,1), X2(:,1), 'x')
-plot( (Y3-mean(Y3)) * Py(:,1), X3(:,1), '*')
+plot( (Uy1) * Dy(:,1), X1(:,1), 'o')
+plot( (Uy2) * Dy(:,1), X2(:,1), 'x')
+plot( (Uy3) * Dy(:,1), X3(:,1), '*')
+x = linspace(-6, 6, 101);
+plot( x, [ones([101 1]), x']*b1 )
 hold off
 grid on
 title('Princial Component Analysis -- Output vs first component')
 xlabel('Y^T v_1 -- 1st principal component projections of Y')
 ylabel('Output [gallons per mile]')
-legend('American', 'European', 'Asian')
+legend('American', 'European', 'Asian', 'linear regression')
 saveas(prinplot1out, strcat('Plots/1stPrin-Output.eps'),'epsc')
 
 % plot 1st and 2nd principal component of corr(Y) and output. Save this one
@@ -86,6 +103,54 @@ ylabel('Y^T v_2 -- 2st principal component projections of Y')
 zlabel('Output [gallons per mile]')
 legend('American', 'European', 'Asian')
 
+% plot component pattern PCA1 vs PCA2
+comppat = figure('Position', [0 0 600 600], 'visible', 'off');
+t = linspace(0, 2*pi, 101);
+hold on
+    plot(sin(t), cos(t))
+    i = 1;
+    for a = [Px(:,1)' ; Px(:,2)']
+        quiver(0, 0, a(1), a(2), 'k','linewidth',1.5);
+        if i == 3
+            dispa = a*1.2 + [0 0.1]';
+        elseif i == 6
+            dispa = a*1.2 + [0.1 0]';
+        else
+            dispa = a*1.2;
+        end
+        text(dispa(1),dispa(2), data.Properties.VariableNames{2+i},...
+            'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle')
+        i = i+1;
+    end
+hold off
+grid on
+xlim([-1.2,1.2])
+ylim([-1.2,1.2])
+axis equal
+title('Component pattern')
+xlabel('1st principal component projections of X')
+ylabel('2nd principal component projections of X')
+saveas(comppat, strcat('Plots/ComPatPCA1PCA2.eps'),'epsc')
+
+
+% plot component pattern PCA1 vs output
+comppatout = figure('Position', [0 0 600 600], 'visible', 'off');
+hold on
+    i = 1;
+    B = b1' * [zeros([7, 1]), Py(:,1)]';
+    bar(B);
+    set(gca,'xticklabel',{'cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin'})
+    xtickangle(60)
+%     for a = [Py(:,1)' ; b1' * [zeros([7, 1]), Py(:,1)]' / norm( b1' * [zeros([7, 1]), Py(:,1)]' ) ]
+%         quiver(0, 0, a(1), a(2), 'k','linewidth',1);
+%         i = i+1;
+%     end
+hold off
+grid on
+title('Component pattern')
+xlabel('1st principal component')
+ylabel('Impact on fuel comsumption (gallons per mile)')
+saveas(comppat, strcat('Plots/ComPatPCA1Output.eps'),'epsc')
 
 
 
