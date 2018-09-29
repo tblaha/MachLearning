@@ -1,15 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Creator: (MATLAB, The Mathworks, Inc. Version 9.2.0.556344 \(R2017a\). Operating System: Windows 8)
+%%Creator: (MATLAB, The Mathworks, Inc. Version 9.3.0.713579 \(R2017b\). Operating System: Windows 10)
 %%Title: Plots/1stPrin-Output.eps
-<<<<<<< Updated upstream
-%%CreationDate: 2018-09-27T09:13:32
+%%CreationDate: 2018-09-29T18:58:48
 %%Pages: (atend)
-%%BoundingBox:    40    11   553   429
-=======
-%%CreationDate: 2018-09-27T11:13:34
-%%Pages: (atend)
-%%BoundingBox:    40    12   545   430
->>>>>>> Stashed changes
+%%BoundingBox:    36     3   545   435
 %%LanguageLevel: 3
 %%EndComments
 %%BeginProlog
@@ -19,24 +13,24 @@
 /bd{bind def}bind def
 /ld{load def}bd
 /GR/grestore ld
-/M/moveto ld
-/LJ/setlinejoin ld
+/GS/gsave ld
+/RM/rmoveto ld
 /C/curveto ld
-/f/fill ld
-/LW/setlinewidth ld
-/GC/setgray ld
 /t/show ld
-/N/newpath ld
-/CT/concat ld
-/cp/closepath ld
-/S/stroke ld
 /L/lineto ld
+/ML/setmiterlimit ld
+/CT/concat ld
+/f/fill ld
+/N/newpath ld
+/S/stroke ld
 /CC/setcmykcolor ld
 /A/ashow ld
-/GS/gsave ld
+/cp/closepath ld
 /RC/setrgbcolor ld
-/RM/rmoveto ld
-/ML/setmiterlimit ld
+/LJ/setlinejoin ld
+/GC/setgray ld
+/LW/setlinewidth ld
+/M/moveto ld
 /re {4 2 roll M
 1 index 0 rlineto
 0 exch rlineto
@@ -203,20 +197,20 @@ b4_Inc_state restore
 } bd
 %%EndResource
 %FOPBeginFontDict
-%%IncludeResource: font Courier-Bold
-%%IncludeResource: font Helvetica
-%%IncludeResource: font Courier-BoldOblique
 %%IncludeResource: font Courier-Oblique
-%%IncludeResource: font Times-Roman
-%%IncludeResource: font Helvetica-BoldOblique
-%%IncludeResource: font Helvetica-Bold
+%%IncludeResource: font Courier-BoldOblique
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font ZapfDingbats
+%%IncludeResource: font Symbol
+%%IncludeResource: font Helvetica
 %%IncludeResource: font Helvetica-Oblique
-%%IncludeResource: font Times-BoldItalic
-%%IncludeResource: font Courier
+%%IncludeResource: font Helvetica-Bold
+%%IncludeResource: font Helvetica-BoldOblique
+%%IncludeResource: font Times-Roman
 %%IncludeResource: font Times-Italic
 %%IncludeResource: font Times-Bold
-%%IncludeResource: font Symbol
-%%IncludeResource: font ZapfDingbats
+%%IncludeResource: font Times-BoldItalic
+%%IncludeResource: font Courier
 %FOPEndFontDict
 %%BeginResource: encoding WinAnsiEncoding
 /WinAnsiEncoding [
@@ -275,6 +269,20 @@ b4_Inc_state restore
 ] def
 %%EndResource
 %FOPBeginFontReencode
+/Courier-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Oblique exch definefont pop
+/Courier-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-BoldOblique exch definefont pop
 /Courier-Bold findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
@@ -289,41 +297,6 @@ dup length dict begin
   currentdict
 end
 /Helvetica exch definefont pop
-/Courier-BoldOblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-BoldOblique exch definefont pop
-/Courier-Oblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-Oblique exch definefont pop
-/Times-Roman findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Times-Roman exch definefont pop
-/Helvetica-BoldOblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica-BoldOblique exch definefont pop
-/Helvetica-Bold findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica-Bold exch definefont pop
 /Helvetica-Oblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
@@ -331,20 +304,27 @@ dup length dict begin
   currentdict
 end
 /Helvetica-Oblique exch definefont pop
-/Times-BoldItalic findfont
+/Helvetica-Bold findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
   /Encoding WinAnsiEncoding def
   currentdict
 end
-/Times-BoldItalic exch definefont pop
-/Courier findfont
+/Helvetica-Bold exch definefont pop
+/Helvetica-BoldOblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
   /Encoding WinAnsiEncoding def
   currentdict
 end
-/Courier exch definefont pop
+/Helvetica-BoldOblique exch definefont pop
+/Times-Roman findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Roman exch definefont pop
 /Times-Italic findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
@@ -359,6 +339,20 @@ dup length dict begin
   currentdict
 end
 /Times-Bold exch definefont pop
+/Times-BoldItalic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-BoldItalic exch definefont pop
+/Courier findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier exch definefont pop
 %FOPEndFontReencode
 %%EndProlog
 %%Page: 1 1
@@ -367,415 +361,259 @@ end
 [1 0 0 -1 0 450] CT
 %%EndPageSetup
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 1 GC
 N
-0 0 1000 750 re
+0 0 800 600 re
 f
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 1 GC
 N
-0 0 1000 750 re
+0 0 800 600 re
 f
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 1 GC
 N
-130 667 M
-905 667 L
-905 56 L
-130 56 L
+104 534 M
+724 534 L
+724 45 L
+104 45 L
 cp
 f
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 667 M
-130 56 L
+104 534 M
+104 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-216.111 667 M
-216.111 56 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-302.222 667 M
-302.222 56 L
-=======
 207.333 534 M
 207.333 45 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-388.333 667 M
-388.333 56 L
+310.667 534 M
+310.667 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-474.444 667 M
-474.444 56 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-560.556 667 M
-560.556 56 L
-=======
 414 534 M
 414 45 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-646.667 667 M
-646.667 56 L
+517.333 534 M
+517.333 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-732.778 667 M
-732.778 56 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-818.889 667 M
-818.889 56 L
-=======
 620.667 534 M
 620.667 45 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-905 667 M
-905 56 L
+724 534 M
+724 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-905 667 M
-130 667 L
+724 534 M
+104 534 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-905 605.9 M
-130 605.9 L
-=======
 724 452.5 M
 104 452.5 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-905 544.8 M
-130 544.8 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-905 483.7 M
-130 483.7 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-905 422.6 M
-130 422.6 L
-=======
 724 371 M
 104 371 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-905 361.5 M
-130 361.5 L
+724 289.5 M
+104 289.5 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-905 300.4 M
-130 300.4 L
-=======
 724 208 M
 104 208 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-905 239.3 M
-130 239.3 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-905 178.2 M
-130 178.2 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.873 GC
-1 LJ
-0.833 LW
-N
-905 117.1 M
-130 117.1 L
-=======
 724 126.5 M
 104 126.5 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.873 GC
 1 LJ
-0.833 LW
+0.667 LW
 N
-905 56 M
-130 56 L
+724 45 M
+104 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 667 M
-905 667 L
+104 534 M
+724 534 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 667 M
-130 659.25 L
+104 534 M
+104 527.8 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-216.111 667 M
-216.111 659.25 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-302.222 667 M
-302.222 659.25 L
-=======
 207.333 534 M
 207.333 527.8 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-388.333 667 M
-388.333 659.25 L
+310.667 534 M
+310.667 527.8 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-474.444 667 M
-474.444 659.25 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-560.556 667 M
-560.556 659.25 L
-=======
 414 534 M
 414 527.8 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-646.667 667 M
-646.667 659.25 L
+517.333 534 M
+517.333 527.8 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-732.778 667 M
-732.778 659.25 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-818.889 667 M
-818.889 659.25 L
-=======
 620.667 534 M
 620.667 527.8 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-905 667 M
-905 659.25 L
+724 534 M
+724 527.8 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 78 404.20001] CT
-=======
 [0.75 0 0 0.75 78 404.49998] CT
 0.149 GC
 /Helvetica 13.333 F
@@ -788,149 +626,74 @@ GR
 GR
 GS
 [0.75 0 0 0.75 155.5 404.49998] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
-<<<<<<< Updated upstream
--17.5 18 moveto 
-1 -1 scale
-(-800) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 129.66667 404.20001] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--17.5 18 moveto 
-1 -1 scale
-(-600) t 
-=======
 -6 14 moveto 
 1 -1 scale
 (-4) t 
->>>>>>> Stashed changes
 GR
 GR
 GS
-[0.6 0 0 0.6 181.33334 404.20001] CT
+[0.75 0 0 0.75 232.99999 404.49998] CT
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
-<<<<<<< Updated upstream
--17.5 18 moveto 
-1 -1 scale
-(-400) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 233.00001 404.20001] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--17.5 18 moveto 
-=======
 -6 14 moveto 
->>>>>>> Stashed changes
 1 -1 scale
 (-2) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 284.66667 404.20001] CT
-=======
 [0.75 0 0 0.75 310.5 404.49998] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--5 18 moveto 
+-4 14 moveto 
 1 -1 scale
 (0) t 
 GR
 GR
 GS
-[0.6 0 0 0.6 336.33333 404.20001] CT
+[0.75 0 0 0.75 387.99998 404.49998] CT
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
-<<<<<<< Updated upstream
--14.5 18 moveto 
-1 -1 scale
-(200) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 388.00001 404.20001] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--14.5 18 moveto 
-=======
 -4 14 moveto 
->>>>>>> Stashed changes
 1 -1 scale
 (2) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 439.66666 404.20001] CT
-=======
 [0.75 0 0 0.75 465.50002 404.49998] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
-<<<<<<< Updated upstream
--14.5 18 moveto 
-=======
 -4 14 moveto 
->>>>>>> Stashed changes
 1 -1 scale
 (4) t 
 GR
 GR
 GS
-[0.6 0 0 0.6 491.33335 404.20001] CT
+[0.75 0 0 0.75 543 404.49998] CT
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
-<<<<<<< Updated upstream
--14.5 18 moveto 
-=======
 -4 14 moveto 
->>>>>>> Stashed changes
 1 -1 scale
 (6) t 
 GR
 GR
 GS
-[0.6 0 0 0.6 543 404.20001] CT
+[0.75 0 0 0.75 138.75 439.5] CT
 0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--19 18 moveto 
-1 -1 scale
-(1000) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 193.8 433.2] CT
-0.149 GC
-/Helvetica 18.333 F
+/Helvetica 21.333 F
 GS
 [1 0 0 1 0 0] CT
 0 0 moveto 
@@ -939,9 +702,9 @@ GS
 GR
 GR
 GS
-[0.6 0 0 0.6 201.6 427.8] CT
+[0.75 0 0 0.75 150 432] CT
 0.149 GC
-/Helvetica 14.667 F
+/Helvetica 17.067 F
 GS
 [1 0 0 1 0 0] CT
 0 0 moveto 
@@ -950,9 +713,9 @@ GS
 GR
 GR
 GS
-[0.6 0 0 0.6 207.6 433.2] CT
+[0.75 0 0 0.75 158.25 439.5] CT
 0.149 GC
-/Helvetica 18.333 F
+/Helvetica 21.333 F
 GS
 [1 0 0 1 0 0] CT
 0 0 moveto 
@@ -961,9 +724,9 @@ GS
 GR
 GR
 GS
-[0.6 0 0 0.6 216.6 438.6] CT
+[0.75 0 0 0.75 171 447] CT
 0.149 GC
-/Helvetica 14.667 F
+/Helvetica 17.067 F
 GS
 [1 0 0 1 0 0] CT
 0 0 moveto 
@@ -972,9 +735,9 @@ GS
 GR
 GR
 GS
-[0.6 0 0 0.6 222 433.2] CT
+[0.75 0 0 0.75 178.5 439.5] CT
 0.149 GC
-/Helvetica 18.333 F
+/Helvetica 21.333 F
 GS
 [1 0 0 1 0 0] CT
 0 0 moveto 
@@ -983,6782 +746,5065 @@ GS
 GR
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 667 M
-130 56 L
+104 534 M
+104 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 667 M
-137.75 667 L
+104 534 M
+110.2 534 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-130 605.9 M
-137.75 605.9 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-130 544.8 M
-137.75 544.8 L
-=======
 104 452.5 M
 110.2 452.5 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-130 483.7 M
-137.75 483.7 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-130 422.6 M
-137.75 422.6 L
-=======
 104 371 M
 110.2 371 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 361.5 M
-137.75 361.5 L
+104 289.5 M
+110.2 289.5 L
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-130 300.4 M
-137.75 300.4 L
-=======
 104 208 M
 110.2 208 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-130 239.3 M
-137.75 239.3 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-130 178.2 M
-137.75 178.2 L
-S
-GR
-GS
-[0.6 0 0 0.6 0 0] CT
-0.149 GC
-2 setlinecap
-1 LJ
-0.833 LW
-N
-130 117.1 M
-137.75 117.1 L
-=======
 104 126.5 M
 110.2 126.5 L
->>>>>>> Stashed changes
 S
 GR
 GS
-[0.6 0 0 0.6 0 0] CT
+[0.75 0 0 0.75 0 0] CT
 0.149 GC
 2 setlinecap
 1 LJ
-0.833 LW
+0.667 LW
 N
-130 56 M
-137.75 56 L
+104 45 M
+110.2 45 L
 S
 GR
 GS
-[0.6 0 0 0.6 74 400.2] CT
+[0.75 0 0 0.75 74 400.5] CT
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
-<<<<<<< Updated upstream
--34 7 moveto 
-=======
 -8 5.5 moveto 
->>>>>>> Stashed changes
 1 -1 scale
 (0) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 74 363.54001] CT
-=======
 [0.75 0 0 0.75 74 339.375] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--34 7 moveto 
+-26 5.5 moveto 
 1 -1 scale
 (0.02) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 74 326.87999] CT
-=======
 [0.75 0 0 0.75 74 278.25] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--34 7 moveto 
+-26 5.5 moveto 
 1 -1 scale
 (0.04) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 74 290.21999] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--34 7 moveto 
-1 -1 scale
-(0.05) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 74 253.56] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--34 7 moveto 
-1 -1 scale
-(0.06) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 74 216.9] CT
-=======
 [0.75 0 0 0.75 74 217.125] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--34 7 moveto 
+-26 5.5 moveto 
 1 -1 scale
 (0.06) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 74 180.24001] CT
-=======
 [0.75 0 0 0.75 74 156] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--34 7 moveto 
+-26 5.5 moveto 
 1 -1 scale
 (0.08) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 74 143.57998] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--34 7 moveto 
-1 -1 scale
-(0.09) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 74 106.92] CT
-=======
 [0.75 0 0 0.75 74 94.87499] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--24 7 moveto 
+-19 5.5 moveto 
 1 -1 scale
 (0.1) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 74 70.26] CT
-0.149 GC
-/Helvetica 16.667 F
-GS
-[1 0 0 1 0 0] CT
--34 7 moveto 
-1 -1 scale
-(0.11) t 
-GR
-GR
-GS
-[0.6 0 0 0.6 74 33.60001] CT
-=======
 [0.75 0 0 0.75 74 33.75001] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 16.667 F
+/Helvetica 13.333 F
 GS
 [1 0 0 1 0 0] CT
--34 7 moveto 
+-26 5.5 moveto 
 1 -1 scale
 (0.12) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0 -0.6 0.6 0 50.6 216.89984] CT
-=======
 [0 -0.75 0.75 0 51.50001 217.12484] CT
->>>>>>> Stashed changes
 0.149 GC
-/Helvetica 18.333 F
+/Helvetica 21.333 F
 GS
 [1 0 0 1 0 0] CT
--98 -4 moveto 
+-116 -5 moveto 
 1 -1 scale
 (Output [gallons per mile]) t 
 GR
 GR
 GS
-[0.6 0 0 0.6 310.50029 31.95001] CT
-/Helvetica-Bold 18.333 F
+[0.75 0 0 0.75 310.5003 30.75002] CT
+/Helvetica-Bold 21.333 F
 GS
 [1 0 0 1 0 0] CT
--248.5 -4 moveto 
+-294 -5 moveto 
 1 -1 scale
 (Princial Component Analysis -- Output vs first component) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 308.28153 269.85333] CT
-=======
 [0.75 0 0 0.75 208.19492 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 338.40216 229.11998] CT
-=======
 [0.75 0 0 0.75 179.74337 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 304.3196 269.85333] CT
-=======
 [0.75 0 0 0.75 194.69669 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 302.26826 244.39501] CT
-=======
 [0.75 0 0 0.75 201.28766 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 302.80441 257.87294] CT
-=======
 [0.75 0 0 0.75 199.4409 220.7206] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 423.80793 229.11998] CT
-=======
 [0.75 0 0 0.75 132.90272 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 430.75023 211.66285] CT
-=======
 [0.75 0 0 0.75 114.577 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 423.89722 211.66285] CT
-=======
 [0.75 0 0 0.75 117.86674 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 439.27826 211.66285] CT
-=======
 [0.75 0 0 0.75 114.98901 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 363.66255 229.11998] CT
-=======
 [0.75 0 0 0.75 146.37732 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 328.44144 229.11998] CT
-=======
 [0.75 0 0 0.75 168.29022 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 327.56169 211.66285] CT
-=======
 [0.75 0 0 0.75 170.64474 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 350.30427 229.11998] CT
-=======
 [0.75 0 0 0.75 168.25377 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 289.8644 211.66285] CT
-=======
 [0.75 0 0 0.75 141.37471 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 216.1894 306.88363] CT
-=======
 [0.75 0 0 0.75 289.67457 261.57955] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 209.94902 269.85333] CT
-=======
 [0.75 0 0 0.75 289.78832 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 187.80465 298.94857] CT
-=======
 [0.75 0 0 0.75 300.68211 254.96429] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 195.13638 298.94857] CT
-=======
 [0.75 0 0 0.75 293.26396 254.96429] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 447.91527 106.92] CT
-=======
 [0.75 0 0 0.75 148.32478 94.87499] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 413.26641 106.92] CT
-=======
 [0.75 0 0 0.75 172.72119 94.87499] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 416.46998 140.24726] CT
-=======
 [0.75 0 0 0.75 160.07901 122.65908] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 451.57928 66.18666] CT
-=======
 [0.75 0 0 0.75 183.92839 60.91667] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 145.05696 342.59143] CT
-=======
 [0.75 0 0 0.75 334.99084 291.34822] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 198.6678 280.57264] CT
-=======
 [0.75 0 0 0.75 277.49055 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 288.04774 244.39501] CT
-=======
 [0.75 0 0 0.75 271.054 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 278.13605 257.87294] CT
-=======
 [0.75 0 0 0.75 271.22706 220.7206] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 273.76681 280.57264] CT
-=======
 [0.75 0 0 0.75 277.0451 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 271.45287 269.85333] CT
-=======
 [0.75 0 0 0.75 275.05687 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 395.88666 211.66285] CT
-=======
 [0.75 0 0 0.75 173.92489 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 431.36591 211.66285] CT
-=======
 [0.75 0 0 0.75 154.01011 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 388.39475 211.66285] CT
-=======
 [0.75 0 0 0.75 186.39904 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 377.75717 211.66285] CT
-=======
 [0.75 0 0 0.75 192.31286 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 484.72888 168.02] CT
-=======
 [0.75 0 0 0.75 144.98618 145.81249] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 462.22958 191.51999] CT
-=======
 [0.75 0 0 0.75 152.74638 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 506.75969 191.51999] CT
-=======
 [0.75 0 0 0.75 142.77991 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 239.40507 269.85333] CT
-=======
 [0.75 0 0 0.75 264.34792 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 158.82155 306.88363] CT
-=======
 [0.75 0 0 0.75 354.71748 261.57955] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 272.92996 280.57264] CT
-=======
 [0.75 0 0 0.75 270.06246 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.65517 269.85333] CT
-=======
 [0.75 0 0 0.75 276.0756 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 137.70223 314.12871] CT
-=======
 [0.75 0 0 0.75 334.36954 267.61956] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 102.19274 332.52001] CT
-=======
 [0.75 0 0 0.75 379.02356 282.95192] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 123.3793 326.87999] CT
-=======
 [0.75 0 0 0.75 357.78129 278.25] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 160.76226 290.21999] CT
-=======
 [0.75 0 0 0.75 351.13804 247.6875] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 138.12401 298.94857] CT
-=======
 [0.75 0 0 0.75 346.96385 254.96429] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 403.08428 191.51999] CT
-=======
 [0.75 0 0 0.75 174.90285 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 422.45669 211.66285] CT
-=======
 [0.75 0 0 0.75 159.91641 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 382.0151 229.11998] CT
-=======
 [0.75 0 0 0.75 195.8939 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 385.58807 211.66285] CT
-=======
 [0.75 0 0 0.75 187.05977 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 328.86486 257.87294] CT
-=======
 [0.75 0 0 0.75 199.00493 220.7206] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 457.33359 140.24726] CT
-=======
 [0.75 0 0 0.75 131.44286 122.65908] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 427.2802 191.51999] CT
-=======
 [0.75 0 0 0.75 181.08722 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 422.71245 168.02] CT
-=======
 [0.75 0 0 0.75 179.79118 145.81249] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 428.24246 191.51999] CT
-=======
 [0.75 0 0 0.75 154.67055 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 353.3369 229.11998] CT
-=======
 [0.75 0 0 0.75 198.85121 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 374.29893 191.51999] CT
-=======
 [0.75 0 0 0.75 209.37046 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 396.56074 191.51999] CT
-=======
 [0.75 0 0 0.75 210.30558 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 375.50464 211.66285] CT
-=======
 [0.75 0 0 0.75 199.12756 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 157.02052 306.88363] CT
-=======
 [0.75 0 0 0.75 341.54288 261.57955] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 127.83195 342.59143] CT
-=======
 [0.75 0 0 0.75 348.58555 291.34822] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 384.66628 191.51999] CT
-=======
 [0.75 0 0 0.75 180.36692 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 328.80938 211.66285] CT
-=======
 [0.75 0 0 0.75 201.26374 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 368.77756 191.51999] CT
-=======
 [0.75 0 0 0.75 195.78893 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 368.16182 211.66285] CT
-=======
 [0.75 0 0 0.75 212.57945 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 342.0887 229.11998] CT
-=======
 [0.75 0 0 0.75 201.02582 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 491.70531 168.02] CT
-=======
 [0.75 0 0 0.75 133.91135 145.81249] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 428.39063 191.51999] CT
-=======
 [0.75 0 0 0.75 171.63098 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 412.20894 191.51999] CT
-=======
 [0.75 0 0 0.75 182.50499 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 393.26451 211.66285] CT
-=======
 [0.75 0 0 0.75 200.32425 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 470.73948 191.51999] CT
-=======
 [0.75 0 0 0.75 126.7615 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 497.72922 168.02] CT
-=======
 [0.75 0 0 0.75 115.58186 145.81249] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 354.85876 191.51999] CT
-=======
 [0.75 0 0 0.75 175.82295 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 252.37548 269.85333] CT
-=======
 [0.75 0 0 0.75 286.01951 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 272.14195 244.39501] CT
-=======
 [0.75 0 0 0.75 287.2034 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 233.02943 269.85333] CT
-=======
 [0.75 0 0 0.75 288.42426 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 242.22325 269.85333] CT
-=======
 [0.75 0 0 0.75 291.28148 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 223.90715 314.12871] CT
-=======
 [0.75 0 0 0.75 297.14268 267.61956] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 487.71222 140.24726] CT
-=======
 [0.75 0 0 0.75 169.49092 122.65908] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 479.59486 168.02] CT
-=======
 [0.75 0 0 0.75 157.52339 145.81249] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 447.09104 191.51999] CT
-=======
 [0.75 0 0 0.75 169.97374 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 429.79277 168.02] CT
-=======
 [0.75 0 0 0.75 168.21118 145.81249] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 215.6989 269.85333] CT
-=======
 [0.75 0 0 0.75 287.31681 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 157.89104 298.94857] CT
-=======
 [0.75 0 0 0.75 361.46379 254.96429] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 147.17493 280.57264] CT
-=======
 [0.75 0 0 0.75 356.3709 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 172.17605 298.94857] CT
-=======
 [0.75 0 0 0.75 299.22544 254.96429] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 379.26665 229.11998] CT
-=======
 [0.75 0 0 0.75 193.93661 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 416.87073 244.39501] CT
-=======
 [0.75 0 0 0.75 129.60249 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 300.0245 229.11998] CT
-=======
 [0.75 0 0 0.75 202.20225 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 336.7337 140.24726] CT
-=======
 [0.75 0 0 0.75 178.39304 122.65908] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 245.90729 290.21999] CT
-=======
 [0.75 0 0 0.75 297.59056 247.6875] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 228.06416 280.57264] CT
-=======
 [0.75 0 0 0.75 291.55012 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 278.63538 229.11998] CT
-=======
 [0.75 0 0 0.75 284.1378 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 162.44172 332.52001] CT
-=======
 [0.75 0 0 0.75 349.69075 282.95192] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 174.1006 326.87999] CT
-=======
 [0.75 0 0 0.75 349.1689 278.25] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 328.29122 244.39501] CT
-=======
 [0.75 0 0 0.75 275.36886 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 313.65527 244.39501] CT
-=======
 [0.75 0 0 0.75 276.7384 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 307.2204 269.85333] CT
-=======
 [0.75 0 0 0.75 278.58321 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 379.53094 244.39501] CT
-=======
 [0.75 0 0 0.75 209.47517 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 448.50967 191.51999] CT
-=======
 [0.75 0 0 0.75 188.10687 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 417.83489 211.66285] CT
-=======
 [0.75 0 0 0.75 194.06637 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 434.83546 211.66285] CT
-=======
 [0.75 0 0 0.75 208.04453 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 393.72418 211.66285] CT
-=======
 [0.75 0 0 0.75 208.7208 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 121.90547 342.59143] CT
-=======
 [0.75 0 0 0.75 355.32651 291.34822] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 267.12946 280.57264] CT
-=======
 [0.75 0 0 0.75 290.0335 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 292.94709 269.85333] CT
-=======
 [0.75 0 0 0.75 277.58885 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 285.81954 229.11998] CT
-=======
 [0.75 0 0 0.75 313.56487 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.36031 229.11998] CT
-=======
 [0.75 0 0 0.75 312.69193 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 453.34241 244.39501] CT
-=======
 [0.75 0 0 0.75 161.22795 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 419.02665 229.11998] CT
-=======
 [0.75 0 0 0.75 195.58118 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 422.27754 244.39501] CT
-=======
 [0.75 0 0 0.75 199.69874 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 443.73552 211.66285] CT
-=======
 [0.75 0 0 0.75 187.72495 182.19642] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 340.89305 257.87294] CT
-=======
 [0.75 0 0 0.75 290.65551 220.7206] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 341.62954 244.39501] CT
-=======
 [0.75 0 0 0.75 279.41158 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 324.45835 229.11998] CT
-=======
 [0.75 0 0 0.75 281.24757 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 325.0351 269.85333] CT
-=======
 [0.75 0 0 0.75 292.3114 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 244.49773 298.94857] CT
-=======
 [0.75 0 0 0.75 282.67097 254.96429] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 268.77883 290.21999] CT
-=======
 [0.75 0 0 0.75 247.70263 247.6875] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 269.92418 191.51999] CT
-=======
 [0.75 0 0 0.75 227.37028 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 185.77326 314.12871] CT
-=======
 [0.75 0 0 0.75 345.99229 267.61956] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 229.45931 290.21999] CT
-=======
 [0.75 0 0 0.75 293.55276 247.6875] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 179.84817 314.12871] CT
-=======
 [0.75 0 0 0.75 355.39318 267.61956] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 229.90232 269.85333] CT
-=======
 [0.75 0 0 0.75 297.46349 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 261.39313 280.57264] CT
-=======
 [0.75 0 0 0.75 296.28671 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 179.42034 326.87999] CT
-=======
 [0.75 0 0 0.75 336.82576 278.25] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 137.44371 332.52001] CT
-=======
 [0.75 0 0 0.75 367.55816 282.95192] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 388.10566 264.03428] CT
-=======
 [0.75 0 0 0.75 207.84947 225.85714] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 387.96892 244.39501] CT
-=======
 [0.75 0 0 0.75 201.75462 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 357.42729 237.00388] CT
-=======
 [0.75 0 0 0.75 225.57619 203.32258] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 394.86497 220.69241] CT
-=======
 [0.75 0 0 0.75 194.00457 189.72414] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 264.22614 306.88363] CT
-=======
 [0.75 0 0 0.75 288.1918 261.57955] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 281.17885 306.88363] CT
-=======
 [0.75 0 0 0.75 275.66423 261.57955] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 234.32073 320.76998] CT
-=======
 [0.75 0 0 0.75 314.31258 273.15626] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 247.23166 310.58665] CT
-=======
 [0.75 0 0 0.75 303.53732 264.66666] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 107.97415 347.10623] CT
-=======
 [0.75 0 0 0.75 404.78604 295.11207] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 124.80331 323.88735] CT
-=======
 [0.75 0 0 0.75 396.11943 275.7551] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 310.69226 290.21999] CT
-=======
 [0.75 0 0 0.75 289.57233 247.6875] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 302.28752 269.85333] CT
-=======
 [0.75 0 0 0.75 310.38249 230.70834] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 314.19642 275.35783] CT
-=======
 [0.75 0 0 0.75 274.81625 235.2973] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 262.87787 264.03428] CT
-=======
 [0.75 0 0 0.75 295.67798 225.85714] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 176.47852 335.18038] CT
-=======
 [0.75 0 0 0.75 340.33775 285.16981] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 360.05698 191.51999] CT
-=======
 [0.75 0 0 0.75 207.51732 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 416.37839 251.33818] CT
-=======
 [0.75 0 0 0.75 175.66 215.27273] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 376.16433 191.51999] CT
-=======
 [0.75 0 0 0.75 197.06364 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 347.9729 191.51999] CT
-=======
 [0.75 0 0 0.75 227.9195 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 339.35204 191.51999] CT
-=======
 [0.75 0 0 0.75 214.50803 165.40384] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 128.08825 351.32] CT
-=======
 [0.75 0 0 0.75 357.03822 298.62499] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 147.31129 329.7553] CT
-=======
 [0.75 0 0 0.75 348.21325 280.64706] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 351.27246 264.03428] CT
-=======
 [0.75 0 0 0.75 212.4164 225.85714] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 361.63143 257.87294] CT
-=======
 [0.75 0 0 0.75 259.02132 220.7206] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 381.7151 237.00388] CT
-=======
 [0.75 0 0 0.75 210.12827 203.32258] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 395.34921 229.11998] CT
-=======
 [0.75 0 0 0.75 221.38531 196.74998] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 300.17732 264.03428] CT
-=======
 [0.75 0 0 0.75 280.37455 225.85714] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 286.74772 294.69075] CT
-=======
 [0.75 0 0 0.75 289.72959 251.41463] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 308.29347 280.57264] CT
-=======
 [0.75 0 0 0.75 292.24496 239.64473] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 299.17886 275.35783] CT
-=======
 [0.75 0 0 0.75 296.43391 235.2973] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 404.40201 244.39501] CT
-=======
 [0.75 0 0 0.75 168.49607 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 391.25537 237.00388] CT
-=======
 [0.75 0 0 0.75 183.63345 203.32258] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 417.16432 237.00388] CT
-=======
 [0.75 0 0 0.75 166.62164 203.32258] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 407.72996 244.39501] CT
-=======
 [0.75 0 0 0.75 202.32875 209.48438] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 198.86292 323.88735] CT
-=======
 [0.75 0 0 0.75 340.28897 275.7551] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 199.37681 329.7553] CT
-=======
 [0.75 0 0 0.75 340.56331 280.64706] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 112.86994 353.32328] CT
-=======
 [0.75 0 0 0.75 377.95784 300.2951] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 117.89331 364.08717] CT
-=======
 [0.75 0 0 0.75 364.07529 309.26866] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 85.3454 371.96876] CT
-=======
 [0.75 0 0 0.75 372.96938 315.83933] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 284.29276 289.2989] CT
-=======
 [0.75 0 0 0.75 260.34025 246.9196] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 335.94053 284.55093] CT
-=======
 [0.75 0 0 0.75 220.47958 242.96134] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 315.57264 292.03486] CT
-=======
 [0.75 0 0 0.75 225.18501 249.2005] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 298.78984 282.58251] CT
-=======
 [0.75 0 0 0.75 299.43823 241.3203] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 251.70297 294.69075] CT
-=======
 [0.75 0 0 0.75 312.35422 251.41463] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 229.55581 292.03486] CT
-=======
 [0.75 0 0 0.75 310.46768 249.2005] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 195.33354 327.46421] CT
-=======
 [0.75 0 0 0.75 342.27972 278.73704] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 285.95922 294.69075] CT
-=======
 [0.75 0 0 0.75 296.35414 251.41463] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 261.09976 284.55093] CT
-=======
 [0.75 0 0 0.75 303.91917 242.96134] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 281.75548 295.55883] CT
-=======
 [0.75 0 0 0.75 288.27553 252.13836] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 241.20315 297.26999] CT
-=======
 [0.75 0 0 0.75 312.16193 253.56491] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 308.17559 276.42323] CT
-=======
 [0.75 0 0 0.75 294.47733 236.18548] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 290.01465 270.97857] CT
-=======
 [0.75 0 0 0.75 273.617 231.64641] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 300.39144 282.58251] CT
-=======
 [0.75 0 0 0.75 226.56825 241.3203] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 295.97531 266.40135] CT
-=======
 [0.75 0 0 0.75 250.52909 227.83051] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 274.96674 270.97857] CT
-=======
 [0.75 0 0 0.75 225.68715 231.64641] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 374.3993 264.03428] CT
-=======
 [0.75 0 0 0.75 215.77192 225.85714] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 125.02305 351.32] CT
-=======
 [0.75 0 0 0.75 373.87404 298.62499] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 135.15691 354.87924] CT
-=======
 [0.75 0 0 0.75 359.77448 301.59224] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 201.81874 315.50277] CT
-=======
 [0.75 0 0 0.75 337.04839 268.76509] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 211.1777 319.48638] CT
-=======
 [0.75 0 0 0.75 348.29354 272.08612] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 267.797 303.00837] CT
-=======
 [0.75 0 0 0.75 287.117 258.34884] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 232.10541 288.36848] CT
-=======
 [0.75 0 0 0.75 322.26945 246.14394] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 214.1016 309.12539] CT
-=======
 [0.75 0 0 0.75 349.13342 263.44844] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 267.10461 292.03486] CT
-=======
 [0.75 0 0 0.75 309.27569 249.2005] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 279.26922 295.55883] CT
-=======
 [0.75 0 0 0.75 293.07845 252.13836] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 344.7795 257.87294] CT
-=======
 [0.75 0 0 0.75 236.45609 220.7206] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 331.63649 265.22454] CT
-=======
 [0.75 0 0 0.75 231.30338 226.84943] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 364.07289 251.33818] CT
-=======
 [0.75 0 0 0.75 213.74405 215.27273] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 345.76674 272.09143] CT
-=======
 [0.75 0 0 0.75 231.43185 232.57418] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 410.93899 256.59692] CT
-=======
 [0.75 0 0 0.75 205.55125 219.6568] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 375.48743 237.00388] CT
-=======
 [0.75 0 0 0.75 214.63085 203.32258] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 313.57178 282.58251] CT
-=======
 [0.75 0 0 0.75 247.99631 241.3203] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 364.82498 275.35783] CT
-=======
 [0.75 0 0 0.75 206.40639 235.2973] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 99.70484 370.83091] CT
-=======
 [0.75 0 0 0.75 366.79507 314.89075] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 186.59998 339.7244] CT
-=======
 [0.75 0 0 0.75 350.56499 288.95803] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 356.02603 314.12871] CT
-=======
 [0.75 0 0 0.75 238.28451 267.61956] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 287.59854 320.13087] CT
-=======
 [0.75 0 0 0.75 298.34125 272.62342] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 131.28866 366.32703] CT
-=======
 [0.75 0 0 0.75 359.39101 311.13597] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 125.5786 367.25914] CT
-=======
 [0.75 0 0 0.75 367.48483 311.91305] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 191.16702 344.43549] CT
-=======
 [0.75 0 0 0.75 345.30501 292.88555] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 188.7884 346.22834] CT
-=======
 [0.75 0 0 0.75 292.51868 294.3802] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 200.38189 336.72894] CT
-=======
 [0.75 0 0 0.75 297.13996 286.46082] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 178.66154 364.08717] CT
-=======
 [0.75 0 0 0.75 335.84324 309.26866] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 121.30957 359.31438] CT
-=======
 [0.75 0 0 0.75 374.0189 305.28971] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 191.96578 342.59143] CT
-=======
 [0.75 0 0 0.75 349.49691 291.34822] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 211.75289 334.65637] CT
-=======
 [0.75 0 0 0.75 355.13155 284.73294] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 227.95441 322.65579] CT
-=======
 [0.75 0 0 0.75 358.14599 274.7284] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 279.13484 281.58283] CT
-=======
 [0.75 0 0 0.75 312.51457 240.48692] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 208.02193 342.12213] CT
-=======
 [0.75 0 0 0.75 330.86481 290.95699] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 168.4415 338.74058] CT
-=======
 [0.75 0 0 0.75 357.44431 288.13786] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 186.44158 335.70048] CT
-=======
 [0.75 0 0 0.75 354.82793 285.60338] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 186.41147 331.42698] CT
-=======
 [0.75 0 0 0.75 342.39711 282.0407] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 202.51849 317.52001] CT
-=======
 [0.75 0 0 0.75 302.11301 270.44682] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 156.9403 351.32] CT
-=======
 [0.75 0 0 0.75 347.8052 298.62499] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 91.76262 379.52] CT
-=======
 [0.75 0 0 0.75 389.52649 322.13461] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 131.92951 367.87159] CT
-=======
 [0.75 0 0 0.75 373.8051 312.42364] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 112.26613 366.95024] CT
-=======
 [0.75 0 0 0.75 382.88516 311.65551] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 149.30139 350.9113] CT
-=======
 [0.75 0 0 0.75 395.10054 298.28428] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 286.05976 309.85928] CT
-=======
 [0.75 0 0 0.75 292.15979 264.06026] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 334.00375 335.70048] CT
-=======
 [0.75 0 0 0.75 261.75101 285.60338] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 240.22921 292.03486] CT
-=======
 [0.75 0 0 0.75 319.48656 249.2005] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 288.04893 265.22454] CT
-=======
 [0.75 0 0 0.75 306.5395 226.84943] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 178.6769 342.59143] CT
-=======
 [0.75 0 0 0.75 375.84412 291.34822] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 182.65931 337.74221] CT
-=======
 [0.75 0 0 0.75 370.97292 287.30555] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 155.36686 365.69648] CT
-=======
 [0.75 0 0 0.75 373.29188 310.6103] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 175.25169 355.26193] CT
-=======
 [0.75 0 0 0.75 363.5397 301.9113] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 172.26848 347.10623] CT
-=======
 [0.75 0 0 0.75 360.26788 295.11207] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 198.09987 337.74221] CT
-=======
 [0.75 0 0 0.75 359.16357 287.30555] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 211.66688 320.76998] CT
-=======
 [0.75 0 0 0.75 350.87718 273.15626] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 121.84666 377.04631] CT
-=======
 [0.75 0 0 0.75 377.00114 320.07236] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 121.61813 371.68667] CT
-=======
 [0.75 0 0 0.75 385.96468 315.60416] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 227.65668 326.87999] CT
-=======
 [0.75 0 0 0.75 314.58323 278.25] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 242.08235 377.04631] CT
-=======
 [0.75 0 0 0.75 313.12674 320.07236] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 182.44279 332.52001] CT
-=======
 [0.75 0 0 0.75 345.76378 282.95192] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 221.7121 306.88363] CT
-=======
 [0.75 0 0 0.75 300.19929 261.57955] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 155.20334 371.68667] CT
-=======
 [0.75 0 0 0.75 350.77776 315.60416] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 222.14473 337.74221] CT
-=======
 [0.75 0 0 0.75 351.99985 287.30555] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 202.68124 337.74221] CT
-=======
 [0.75 0 0 0.75 351.65291 287.30555] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 146.94207 358.95751] CT
-=======
 [0.75 0 0 0.75 346.40158 304.99219] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 180.90516 342.59143] CT
-=======
 [0.75 0 0 0.75 373.88995 291.34822] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 191.66631 355.26193] CT
-=======
 [0.75 0 0 0.75 374.20949 301.9113] CT
->>>>>>> Stashed changes
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 212.51135 332.52001] CT
-=======
 [0.75 0 0 0.75 403.10477 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 312.29667 326.87999] CT
-=======
 [0.75 0 0 0.75 353.82381 278.25] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 285.5113 320.76998] CT
-=======
 [0.75 0 0 0.75 345.23023 273.15626] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 279.35717 326.87999] CT
-=======
 [0.75 0 0 0.75 357.15965 278.25] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 268.03372 332.52001] CT
-=======
 [0.75 0 0 0.75 328.24766 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 252.29141 342.59143] CT
-=======
 [0.75 0 0 0.75 349.93696 291.34822] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 239.80657 351.32] CT
-=======
 [0.75 0 0 0.75 388.92238 298.62499] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 240.91912 351.32] CT
-=======
 [0.75 0 0 0.75 364.03832 298.62499] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 214.04213 337.74221] CT
-=======
 [0.75 0 0 0.75 392.94406 287.30555] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 259.82855 314.12871] CT
-=======
 [0.75 0 0 0.75 408.38631 267.61956] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 345.65464 269.85333] CT
-=======
 [0.75 0 0 0.75 327.79463 230.70834] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 294.22683 306.88363] CT
-=======
 [0.75 0 0 0.75 366.60358 261.57955] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 347.46006 298.94857] CT
-=======
 [0.75 0 0 0.75 358.97601 254.96429] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 254.57686 332.52001] CT
-=======
 [0.75 0 0 0.75 380.22933 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 225.13887 332.52001] CT
-=======
 [0.75 0 0 0.75 409.70586 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 265.80218 332.52001] CT
-=======
 [0.75 0 0 0.75 360.95052 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 212.93522 347.10623] CT
-=======
 [0.75 0 0 0.75 408.61629 295.11207] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 254.27509 320.76998] CT
-=======
 [0.75 0 0 0.75 366.64462 273.15626] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 303.27729 290.21999] CT
-=======
 [0.75 0 0 0.75 345.30501 247.6875] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 338.26915 280.57264] CT
-=======
 [0.75 0 0 0.75 335.5158 239.64473] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 314.94855 320.76998] CT
-=======
 [0.75 0 0 0.75 334.2233 273.15626] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 259.7456 347.10623] CT
-=======
 [0.75 0 0 0.75 371.38081 295.11207] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 227.22261 332.52001] CT
-=======
 [0.75 0 0 0.75 382.48169 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 268.25559 332.52001] CT
-=======
 [0.75 0 0 0.75 363.79205 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 245.59521 320.76998] CT
-=======
 [0.75 0 0 0.75 374.25368 273.15626] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 264.15456 332.52001] CT
-=======
 [0.75 0 0 0.75 360.89713 282.95192] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 231.31284 355.26193] CT
-=======
 [0.75 0 0 0.75 383.84333 301.9113] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 257.84308 326.87999] CT
-=======
 [0.75 0 0 0.75 380.18985 278.25] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 226.00867 347.10623] CT
-=======
 [0.75 0 0 0.75 375.81239 295.11207] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 316.15635 314.12871] CT
-=======
 [0.75 0 0 0.75 349.86724 267.61956] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 345.14407 314.12871] CT
-=======
 [0.75 0 0 0.75 355.29176 267.61956] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 345.24478 306.88363] CT
-=======
 [0.75 0 0 0.75 340.50163 261.57955] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 316.66868 326.87999] CT
-=======
 [0.75 0 0 0.75 334.23095 278.25] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 288.44335 342.59143] CT
-=======
 [0.75 0 0 0.75 364.05666 291.34822] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 261.59755 326.87999] CT
-=======
 [0.75 0 0 0.75 375.41043 278.25] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 258.18133 337.74221] CT
-=======
 [0.75 0 0 0.75 370.71199 287.30555] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 225.93783 347.10623] CT
-=======
 [0.75 0 0 0.75 378.90752 295.11207] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 214.52686 349.24882] CT
-=======
 [0.75 0 0 0.75 371.13588 296.89831] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 369.47838 290.21999] CT
-=======
 [0.75 0 0 0.75 340.46564 247.6875] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 379.63821 280.57264] CT
-=======
 [0.75 0 0 0.75 371.87208 239.64473] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 450.87572 251.33818] CT
-=======
 [0.75 0 0 0.75 297.2306 215.27273] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 210.40157 371.68667] CT
-=======
 [0.75 0 0 0.75 408.90463 315.60416] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 227.91817 347.10623] CT
-=======
 [0.75 0 0 0.75 377.66249 295.11207] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.84545 353.32328] CT
-=======
 [0.75 0 0 0.75 371.06351 300.2951] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 308.12377 303.00837] CT
-=======
 [0.75 0 0 0.75 339.42313 258.34884] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 228.1348 388.46199] CT
-=======
 [0.75 0 0 0.75 422.69518 329.58932] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 333.98782 292.92887] CT
-=======
 [0.75 0 0 0.75 341.56432 249.94581] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 375.10419 257.87294] CT
-=======
 [0.75 0 0 0.75 300.82228 220.7206] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 330.16974 303.79779] CT
-=======
 [0.75 0 0 0.75 347.7632 259.00694] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 405.96753 247.22369] CT
-=======
 [0.75 0 0 0.75 301.17707 211.84259] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 231.68302 357.13905] CT
-=======
 [0.75 0 0 0.75 385.03519 303.47619] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 224.44367 358.59836] CT
-=======
 [0.75 0 0 0.75 384.81152 304.69279] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 414.87092 329.18928] CT
-=======
 [0.75 0 0 0.75 350.31464 280.17519] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 370.85977 338.74058] CT
-=======
 [0.75 0 0 0.75 396.31425 288.13786] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 247.27317 375.2358] CT
-=======
 [0.75 0 0 0.75 384.24417 318.563] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 250.39098 385.18264] CT
-=======
 [0.75 0 0 0.75 381.96844 326.85542] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.32512 366.63955] CT
-=======
 [0.75 0 0 0.75 384.98795 311.39651] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 239.16709 390.76604] CT
-=======
 [0.75 0 0 0.75 426.07855 331.51016] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 266.90982 389.04994] CT
-=======
 [0.75 0 0 0.75 429.51517 330.07949] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 341.71912 372.8057] CT
-=======
 [0.75 0 0 0.75 377.98009 316.53708] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 377.86362 351.32] CT
-=======
 [0.75 0 0 0.75 385.76884 298.62499] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 214.34401 350.49987] CT
-=======
 [0.75 0 0 0.75 398.04721 297.94128] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 294.25219 368.77712] CT
-=======
 [0.75 0 0 0.75 367.31069 313.17858] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 256.10068 362.42908] CT
-=======
 [0.75 0 0 0.75 380.93589 307.88635] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 376.56797 343.05736] CT
-=======
 [0.75 0 0 0.75 377.68062 291.73666] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 369.06116 354.10631] CT
-=======
 [0.75 0 0 0.75 356.89996 300.94789] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 232.52752 371.68667] CT
-=======
 [0.75 0 0 0.75 391.9325 315.60416] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 245.12648 390.20182] CT
-=======
 [0.75 0 0 0.75 438.89859 331.03976] CT
->>>>>>> Stashed changes
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 304.90175 320.76998] CT
-=======
 [0.75 0 0 0.75 359.66478 273.15626] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 275.2712 337.74221] CT
-=======
 [0.75 0 0 0.75 368.1124 287.30555] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 275.21572 337.74221] CT
-=======
 [0.75 0 0 0.75 370.37121 287.30555] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 288.85477 326.87999] CT
-=======
 [0.75 0 0 0.75 360.57969 278.25] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 229.38845 355.26193] CT
-=======
 [0.75 0 0 0.75 410.71925 301.9113] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 212.18084 368.77712] CT
-=======
 [0.75 0 0 0.75 407.76073 313.17858] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 294.26325 320.76998] CT
-=======
 [0.75 0 0 0.75 368.12547 273.15626] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 295.2963 280.57264] CT
-=======
 [0.75 0 0 0.75 375.02843 239.64473] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 293.05073 342.59143] CT
-=======
 [0.75 0 0 0.75 378.20828 291.34822] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 320.8277 314.12871] CT
-=======
 [0.75 0 0 0.75 357.39496 267.61956] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 271.65884 337.74221] CT
-=======
 [0.75 0 0 0.75 381.58418 287.30555] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 291.38503 290.21999] CT
-=======
 [0.75 0 0 0.75 390.76945 247.6875] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 304.70244 306.88363] CT
-=======
 [0.75 0 0 0.75 373.85545 261.57955] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 271.46283 269.85333] CT
-=======
 [0.75 0 0 0.75 384.43007 230.70834] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 361.70511 290.21999] CT
-=======
 [0.75 0 0 0.75 312.57932 247.6875] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 250.13582 355.26193] CT
-=======
 [0.75 0 0 0.75 411.78374 301.9113] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 236.09815 358.95751] CT
-=======
 [0.75 0 0 0.75 424.61723 304.99219] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 214.69376 355.26193] CT
-=======
 [0.75 0 0 0.75 414.37253 301.9113] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.84014 358.95751] CT
-=======
 [0.75 0 0 0.75 412.71085 304.99219] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 318.78135 320.76998] CT
-=======
 [0.75 0 0 0.75 364.33832 273.15626] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 305.94987 332.52001] CT
-=======
 [0.75 0 0 0.75 372.1368 282.95192] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 277.98404 347.10623] CT
-=======
 [0.75 0 0 0.75 390.59729 295.11207] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 344.13571 320.76998] CT
-=======
 [0.75 0 0 0.75 354.21778 273.15626] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 324.70375 320.76998] CT
-=======
 [0.75 0 0 0.75 374.02451 273.15626] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 232.72278 362.42908] CT
-=======
 [0.75 0 0 0.75 414.9771 307.88635] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 232.67499 362.42908] CT
-=======
 [0.75 0 0 0.75 416.81776 307.88635] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.68395 358.95751] CT
-=======
 [0.75 0 0 0.75 404.82138 304.99219] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 276.11243 342.59143] CT
-=======
 [0.75 0 0 0.75 394.84401 291.34822] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 373.5275 280.57264] CT
-=======
 [0.75 0 0 0.75 331.46198 239.64473] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 262.94683 357.13905] CT
-=======
 [0.75 0 0 0.75 410.96718 303.47619] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 250.62248 364.08717] CT
-=======
 [0.75 0 0 0.75 407.13066 309.26866] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 288.19299 332.52001] CT
-=======
 [0.75 0 0 0.75 402.46188 282.95192] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 256.18303 351.32] CT
-=======
 [0.75 0 0 0.75 403.97676 298.62499] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 358.30192 306.88363] CT
-=======
 [0.75 0 0 0.75 338.32977 261.57955] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 341.17819 303.00837] CT
-=======
 [0.75 0 0 0.75 371.23203 258.34884] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 251.97601 361.7517] CT
-=======
 [0.75 0 0 0.75 428.5773 307.32166] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 264.37685 380.4743] CT
-=======
 [0.75 0 0 0.75 414.45296 322.93021] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 233.99015 371.96876] CT
-=======
 [0.75 0 0 0.75 413.97189 315.83933] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 327.9572 340.21091] CT
-=======
 [0.75 0 0 0.75 367.15995 289.36363] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 297.37562 338.74058] CT
-=======
 [0.75 0 0 0.75 376.01138 288.13786] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 322.88969 299.77592] CT
-=======
 [0.75 0 0 0.75 370.5556 255.65403] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 309.07679 320.13087] CT
-=======
 [0.75 0 0 0.75 374.7786 272.62342] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 273.08024 349.24882] CT
-=======
 [0.75 0 0 0.75 403.50764 296.89831] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 253.53411 366.01267] CT
-=======
 [0.75 0 0 0.75 406.40135 310.8739] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 258.13074 358.23699] CT
-=======
 [0.75 0 0 0.75 422.40848 304.39151] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 252.20685 377.29951] CT
-=======
 [0.75 0 0 0.75 425.55034 320.28346] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 258.29615 374.97162] CT
-=======
 [0.75 0 0 0.75 412.81091 318.34275] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 344.0306 350.49987] CT
-=======
 [0.75 0 0 0.75 376.34052 297.94128] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 321.68353 356.39539] CT
-=======
 [0.75 0 0 0.75 396.99156 302.85622] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 311.62899 374.43893] CT
-=======
 [0.75 0 0 0.75 381.34543 317.89865] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 289.54561 359.66906] CT
-=======
 [0.75 0 0 0.75 394.84717 305.5854] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 268.33513 394.85046] CT
-=======
 [0.75 0 0 0.75 417.28999 334.91524] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 268.11802 383.66704] CT
-=======
 [0.75 0 0 0.75 422.8938 325.59192] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 240.44973 391.32268] CT
-=======
 [0.75 0 0 0.75 403.54889 331.97422] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 273.74733 365.05847] CT
-=======
 [0.75 0 0 0.75 414.29073 310.0784] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 375.5075 361.40991] CT
-=======
 [0.75 0 0 0.75 311.16067 307.0367] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 305.31129 318.83646] CT
-=======
 [0.75 0 0 0.75 385.82249 271.54429] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 291.74061 360.37185] CT
-=======
 [0.75 0 0 0.75 403.37059 306.1713] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 227.13239 379.76041] CT
-=======
 [0.75 0 0 0.75 426.62141 322.33504] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 228.21216 369.07555] CT
-=======
 [0.75 0 0 0.75 421.96097 313.42735] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 264.78036 360.02153] CT
-=======
 [0.75 0 0 0.75 417.28967 305.87926] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 252.98304 374.43893] CT
-=======
 [0.75 0 0 0.75 428.64917 317.89865] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 261.64288 376.27863] CT
-=======
 [0.75 0 0 0.75 419.04007 319.43237] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 255.40221 366.01267] CT
-=======
 [0.75 0 0 0.75 411.90623 310.8739] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 283.2973 364.73661] CT
-=======
 [0.75 0 0 0.75 395.01247 309.81008] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 298.85191 360.37185] CT
-=======
 [0.75 0 0 0.75 402.1214 306.1713] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 332.69026 362.09143] CT
-=======
 [0.75 0 0 0.75 375.67726 307.60485] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 331.83098 357.50735] CT
-=======
 [0.75 0 0 0.75 401.20349 303.78323] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 372.43528 329.18928] CT
-=======
 [0.75 0 0 0.75 325.68233 280.17519] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 373.5661 322.03239] CT
-=======
 [0.75 0 0 0.75 332.04037 274.20868] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 259.64099 374.43893] CT
-=======
 [0.75 0 0 0.75 422.57611 317.89865] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 253.5499 355.26193] CT
-=======
 [0.75 0 0 0.75 421.151 301.9113] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 280.64685 371.68667] CT
-=======
 [0.75 0 0 0.75 390.76575 315.60416] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 282.67621 371.68667] CT
-=======
 [0.75 0 0 0.75 397.78798 315.60416] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 286.50703 365.69648] CT
-=======
 [0.75 0 0 0.75 409.06998 310.6103] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 253.07889 377.04631] CT
-=======
 [0.75 0 0 0.75 410.81818 320.07236] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 253.02506 358.95751] CT
-=======
 [0.75 0 0 0.75 413.74521 304.99219] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 256.33418 377.04631] CT
-=======
 [0.75 0 0 0.75 415.2448 320.07236] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 340.75917 358.95751] CT
-=======
 [0.75 0 0 0.75 370.75239 304.99219] CT
->>>>>>> Stashed changes
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 0 0] CT
-1 GC
-N
-759 139 M
-759 73 L
-888 73 L
-888 139 L
-=======
 [0.75 0 0 0.75 0 0] CT
 0.494 0.184 0.557 RC
 1 LJ
@@ -7871,118 +5917,87 @@ GS
 [0.75 0 0 0.75 0 0] CT
 1 GC
 N
-711 128 M
+711 160 M
 711 58 L
-571 58 L
-571 128 L
->>>>>>> Stashed changes
+522 58 L
+522 160 L
 cp
 f
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 490.44624 51.2717] CT
-/Helvetica 15 F
-=======
-[0.75 0 0 0.75 463.5 51.05396] CT
-/Helvetica 12 F
->>>>>>> Stashed changes
+[0.75 0 0 0.75 426.75 54.05173] CT
+/Helvetica 18.667 F
 GS
 [1 0 0 1 0 0] CT
-0 6 moveto 
+0 7 moveto 
 1 -1 scale
 (American) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 473.29596 51.2717] CT
-=======
-[0.75 0 0 0.75 446.25 51.05396] CT
->>>>>>> Stashed changes
+[0.75 0 0 0.75 409.5 54.05172] CT
 0 0.447 0.741 RC
 10.0 ML
 N
-4.5 -0.5 M
-4.5 -3.261 2.261 -5.5 -0.5 -5.5 C
--3.261 -5.5 -5.5 -3.261 -5.5 -0.5 C
--5.5 2.261 -3.261 4.5 -0.5 4.5 C
-2.261 4.5 4.5 2.261 4.5 -0.5 C
+4 0 M
+4 -2.209 2.209 -4 0 -4 C
+-2.209 -4 -4 -2.209 -4 0 C
+-4 2.209 -2.209 4 0 4 C
+2.209 4 4 2.209 4 0 C
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 490.44624 63.6] CT
-/Helvetica 15 F
-=======
-[0.75 0 0 0.75 463.5 63.51799] CT
-/Helvetica 12 F
->>>>>>> Stashed changes
+[0.75 0 0 0.75 426.75 72.51724] CT
+/Helvetica 18.667 F
 GS
 [1 0 0 1 0 0] CT
-0 6 moveto 
+0 7 moveto 
 1 -1 scale
 (European) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 473.29596 63.6] CT
-=======
-[0.75 0 0 0.75 446.25 63.51799] CT
->>>>>>> Stashed changes
+[0.75 0 0 0.75 409.5 72.51724] CT
 0.851 0.325 0.098 RC
 10.0 ML
 N
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 490.44624 75.9283] CT
-/Helvetica 15 F
-=======
-[0.75 0 0 0.75 463.5 75.98201] CT
-/Helvetica 12 F
->>>>>>> Stashed changes
+[0.75 0 0 0.75 426.75 90.98276] CT
+/Helvetica 18.667 F
 GS
 [1 0 0 1 0 0] CT
-0 6 moveto 
+0 7 moveto 
 1 -1 scale
 (Asian) t 
 GR
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 473.29596 75.9283] CT
-=======
-[0.75 0 0 0.75 446.25 75.98201] CT
->>>>>>> Stashed changes
+[0.75 0 0 0.75 409.5 90.98276] CT
 0.929 0.694 0.125 RC
 10.0 ML
 N
-0 -5 M
-0 5 L
--5 0 M
-5 0 L
--3.536 -3.536 M
-3.536 3.536 L
--3.536 3.536 M
-3.536 -3.536 L
+0 -4 M
+0 4 L
+-4 0 M
+4 0 L
+-2.828 -2.828 M
+2.828 2.828 L
+-2.828 2.828 M
+2.828 -2.828 L
 S
 GR
 GS
-<<<<<<< Updated upstream
-[0.6 0 0 0.6 0 0] CT
-=======
-[0.75 0 0 0.75 463.5 88.44604] CT
-/Helvetica 12 F
+[0.75 0 0 0.75 426.75 109.44827] CT
+/Helvetica 18.667 F
 GS
 [1 0 0 1 0 0] CT
-0 5 moveto 
+0 7 moveto 
 1 -1 scale
 (linear regression) t 
 GR
@@ -7993,28 +6008,20 @@ GS
 1 LJ
 0.667 LW
 N
-575 117.928 M
-615 117.928 L
+526 145.931 M
+566 145.931 L
 S
 GR
 GS
 [0.75 0 0 0.75 0 0] CT
->>>>>>> Stashed changes
 0.149 GC
 10.0 ML
-0.833 LW
+0.667 LW
 N
-<<<<<<< Updated upstream
-759 139 M
-759 73 L
-888 73 L
-888 139 L
-=======
-571 128 M
-571 58 L
+522 160 M
+522 58 L
 711 58 L
-711 128 L
->>>>>>> Stashed changes
+711 160 L
 cp
 S
 GR

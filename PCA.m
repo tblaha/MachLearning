@@ -16,7 +16,9 @@ sigmas = sort(diag(D_raw), 'desc'); % sorted eigenvalues
 [Ux,Dx,Px]  = svd( ( (X-mean(X)) ./ std(X) ) );
 [Uy,Dy,Py]  = svd( ( (Y-mean(Y)) ./ std(Y) ) );
 
-
+%%
+fsize = 16;
+fsizeldg = 14;
 
 
 
@@ -33,12 +35,14 @@ hold on
 plot( 0:M, [0; cumsum(diag(Dx) / trace(Dx(1:8,1:8))) ], '-o')
 plot( 0:M-1, [0; cumsum(diag(Dy) / trace(Dy(1:7,1:7))) ], '-x')
 hold off
-title('Variance Explaned')
-xlabel('Number of Principal Components')
-ylabel('Cumulative Normalized Variance')
+title('Variance Explaned','FontSize', fsize)
+xlabel('Number of Principal Components','FontSize', fsize)
+ylabel('Cumulative Normalized Variance','FontSize', fsize)
 grid on
 ylim([0,1])
-legend('Cumulative \sigma of X', 'Cumulative \sigma of Y')
+lgd = legend('Cumulative \sigma of X', 'Cumulative \sigma of Y');
+lgd.FontSize = fsizeldg;
+lgd.Location = 'northwest';
 saveas(varplot, strcat('Plots/varplot.eps'),'epsc')
 
 % group by continent:
@@ -63,10 +67,12 @@ plot( Ux2*Dx(:,1), Ux2*Dx(:,2), 'x')
 plot( Ux3*Dx(:,1), Ux3*Dx(:,2), '*')
 hold off
 grid on
-title('Princial Component Analysis -- First 2 components')
-xlabel('X^T v_1 -- 1st principal component projections of X')
-ylabel('X^T v_2 -- 2st principal component projections of X')
-legend('American', 'European', 'Asian')
+title('Princial Component Analysis -- First 2 components','FontSize', fsize)
+xlabel('X^T v_1 -- 1st principal component projections of X','FontSize', fsize)
+ylabel('X^T v_2 -- 2st principal component projections of X','FontSize', fsize)
+lgd = legend('American', 'European', 'Asian');
+lgd.FontSize = fsizeldg;
+lgd.Location = 'northwest';
 saveas(prinplot12, strcat('Plots/1stPrin-2ndPrin.eps'),'epsc')
 
 % plot 1st principal components of corr(Y) and output
@@ -82,10 +88,11 @@ x = linspace(-6, 6, 101);
 plot( x, [ones([101 1]), x']*b1 )
 hold off
 grid on
-title('Princial Component Analysis -- Output vs first component')
-xlabel('Y^T v_1 -- 1st principal component projections of Y')
-ylabel('Output [gallons per mile]')
-legend('American', 'European', 'Asian', 'linear regression')
+title('Princial Component Analysis -- Output vs first component','FontSize', fsize)
+xlabel('Y^T v_1 -- 1st principal component projections of Y','FontSize', fsize)
+ylabel('Output [gallons per mile]','FontSize', fsize)
+lgd = legend('American', 'European', 'Asian', 'linear regression');
+lgd.FontSize = fsizeldg;
 saveas(prinplot1out, strcat('Plots/1stPrin-Output.eps'),'epsc')
 
 % plot 1st and 2nd principal component of corr(Y) and output. Save this one
@@ -112,14 +119,16 @@ hold on
     for a = [Px(:,1)' ; Px(:,2)']
         quiver(0, 0, a(1), a(2), 'k','linewidth',1.5);
         if i == 3
-            dispa = a*1.2 + [0 0.1]';
+            dispa = a*1.3 + [-0.1 0.1]';
         elseif i == 6
-            dispa = a*1.2 + [0.1 0]';
+            dispa = a*1.3 + [0.15 0]';
+        elseif i == 7
+            dispa = a*1.1;
         else
-            dispa = a*1.2;
+            dispa = a*1.4;
         end
         text(dispa(1),dispa(2), data.Properties.VariableNames{2+i},...
-            'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle')
+            'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle','FontSize',14)
         i = i+1;
     end
 hold off
@@ -127,9 +136,9 @@ grid on
 xlim([-1.2,1.2])
 ylim([-1.2,1.2])
 axis equal
-title('Component pattern')
-xlabel('1st principal component projections of X')
-ylabel('2nd principal component projections of X')
+title('Component pattern PCA1,2','FontSize', fsize)
+xlabel('1st principal component projections of X','FontSize', fsize)
+ylabel('2nd principal component projections of X','FontSize', fsize)
 saveas(comppat, strcat('Plots/ComPatPCA1PCA2.eps'),'epsc')
 
 
@@ -147,10 +156,10 @@ hold on
 %     end
 hold off
 grid on
-title('Component pattern')
-xlabel('1st principal component')
-ylabel('Impact on fuel comsumption (gallons per mile)')
-saveas(comppat, strcat('Plots/ComPatPCA1Output.eps'),'epsc')
+title('Component pattern PCA1/Output','FontSize', fsize)
+xlabel('1st principal component','FontSize', fsize)
+ylabel('Impact on fuel comsumption (gallons per mile)','FontSize', fsize)
+saveas(comppatout, strcat('Plots/ComPatPCA1Output.eps'),'epsc')
 
 
 
