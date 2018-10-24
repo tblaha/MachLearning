@@ -2,7 +2,7 @@ clear
 close all
 
 %%
-importdata
+importdata_Report1
 
 %% 
 mean_x   = mean(X);
