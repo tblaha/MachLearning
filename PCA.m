@@ -15,6 +15,23 @@ sigmas = sort(diag(D_raw), 'desc'); % sorted eigenvalues
 
 [Ux,Dx,Px]  = svd( ( (X-mean(X)) ./ std(X) ) );
 [Uy,Dy,Py]  = svd( ( (Y-mean(Y)) ./ std(Y) ) );
+corrX       = corr((X-mean(X)) ./ std(X));
+
+%% plot corrmap
+
+corrmap = figure('Position', [0 0 800 600], 'visible', 'off');
+imagesc(corrX);
+cmap = hsv(256);
+set(gca,'xticklabel',{'gpm','cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin'})
+xtickangle(60)
+set(gca,'yticklabel',{'gpm','cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin'})
+xt = get(gca, 'XTick');
+set(gca, 'FontSize', 16)
+yt = get(gca, 'YTick');
+set(gca, 'FontSize', 16)
+colormap(fliplr(gray')')
+colorbar
+saveas(corrmap, strcat('Plots/corrmat.eps'),'epsc')
 
 %%
 fsize = 16;
@@ -143,17 +160,14 @@ saveas(comppat, strcat('Plots/ComPatPCA1PCA2.eps'),'epsc')
 
 
 % plot component pattern PCA1 vs output
-comppatout = figure('Position', [0 0 600 600], 'visible', 'off');
+comppatout = figure('Position', [0 0 800 600], 'visible', 'off');
 hold on
-    i = 1;
-    B = b1' * [zeros([7, 1]), Py(:,1)]';
-    bar(B);
-    set(gca,'xticklabel',{'cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin'})
-    xtickangle(60)
-%     for a = [Py(:,1)' ; b1' * [zeros([7, 1]), Py(:,1)]' / norm( b1' * [zeros([7, 1]), Py(:,1)]' ) ]
-%         quiver(0, 0, a(1), a(2), 'k','linewidth',1);
-%         i = i+1;
-%     end
+B = b1' * [zeros([7, 1]), Py(:,1)]';
+bar(B);
+set(gca,'xticklabel',{'','cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin'})
+xtickangle(60)
+xt = get(gca, 'XTick');
+set(gca, 'FontSize', 16)
 hold off
 grid on
 title('Component pattern PCA1/Output','FontSize', fsize)
@@ -162,4 +176,57 @@ ylabel('Impact on fuel comsumption (gallons per mile)','FontSize', fsize)
 saveas(comppatout, strcat('Plots/ComPatPCA1Output.eps'),'epsc')
 
 
+%% evaluating the regression thing
+
+beta = zeros(2,7);
+for i = 1:7
+    A = [ones([Ny,1]), Uy*Dy(:,i) ];
+    beta(:,i) = A\X(:,1);
+end
+
+B = beta(2,:).*Py(:,:); % yields 7x7 matrix, multiplying the linear regression coeffients to the corresponsing eigenvectors
+
+
+inferredgpm = zeros([length(X), 7]);
+
+for c = 1:7
+    
+    % c components
+    for i = 1:length(X)
+        inferredgpm(i,c) = 0;
+        for j = 1:c
+            inferredgpm(i,c) = inferredgpm(i,c) + (B(j,:)*((Y(i,1:end)-mean(Y))./std(Y))'); % subtracting the infered value from the actual value and squaring
+        end
+    end
+    
+    inferredgpm(:,c) = beta(1,1) + inferredgpm(:,c); % adding back in the constant regression term
+    
+end
+
+% one components
+meanoffsetone = mean(inferredgpm(:,1)) - mean(X(:,1)); % should be zero by definition
+varianceone = sum((inferredgpm(:,1) - X(:,1)).^2 ./ length(X));
+sdone       = sqrt(varianceone);
+disp(sdone/mean(X(:,1)))
+
+% all components
+meanoffset = mean(inferredgpm(:,7)) - mean(X(:,1)); % should be zero by definition
+variance = sum((inferredgpm(:,7) - X(:,1)).^2 ./ length(X));
+sd       = sqrt(variance);
+disp(sd/mean(X(:,1)))
+
+%plotting the above
+regressout = figure('Position', [0 0 800 500], 'visible', 'on');
+hold on
+boxplot(sqrt((inferredgpm - X(:,1)).^2 ./ length(X) )) 
+%set(gca,'xticklabel',{'','cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin'})
+%xtickangle(60)
+xt = get(gca, 'XTick');
+set(gca, 'FontSize', 16)
+hold off
+grid on
+title('Terms of the standard error of the regressions','FontSize', fsize)
+xlabel('Amount of Principal Components included','FontSize', fsize)
+ylabel('Fuel comsumption (gallons per mile)','FontSize', fsize)
+saveas(regressout, strcat('Plots/regressout.eps'),'epsc')
 

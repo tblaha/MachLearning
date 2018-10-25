@@ -11,11 +11,11 @@ median_x = median(X);
 range_x  = range(X);
 
 %% Histogram
-fsize = 20;
+fsize = 22;
 Year = data{:,9};
 figure('Position',[0 0 800 600],'visible','off');
 histplot=histogram(Year);
-title('Car model year','FontSize', fsize)
+title('Car model year','FontSize', 26)
 xlabel('Year manufactured','FontSize', fsize)
 ylabel('Amount of cars','FontSize', fsize)
 ylim([0,45]);
@@ -27,7 +27,7 @@ fsize = 20;
 HP = data{:,6};
 figure('Position',[0 0 800 600],'visible','off');
 histplot2=histogram(HP);
-title('Car horsepower','FontSize', fsize)
+title('Car horsepower','FontSize', 26)
 xlabel('Horsepower','FontSize', fsize)
 ylabel('Amount of cars','FontSize', fsize)
 % ylim([0,45]);
