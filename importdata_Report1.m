@@ -52,4 +52,6 @@ Y = data{:,4:end};
 
 %% clean up workspace
 
+save('X', 'X')
+
 clear id horse len desc i

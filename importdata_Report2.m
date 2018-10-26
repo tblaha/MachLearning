@@ -11,7 +11,7 @@ close all
 % you can get a list of column names by data.Properties.VariableNames
 
 %%% import
-data = readtable('Data.txt'); % read data
+data = readtable('Data.txt','MultipleDelimsAsOne', 1); % read data
 desc = {'gpm', 'cylinders', 'displacement', 'horsepower', 'weight', 'accelleration', 'year', 'origin', 'name'};
 data.Properties.VariableNames = desc; % add descriptors as table column names
 
@@ -70,5 +70,7 @@ Y = data{:,4:end};
 
 
 %% clean up workspace
+
+save('XoneoutofK', 'X')
 
 clear id horse len desc i

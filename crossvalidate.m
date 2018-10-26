@@ -1,34 +1,12 @@
-importdata_Report2
+function [Egen, s_select] = crossvalidate(X, P, M, L, outarg)
+
+
 
 %% configuration
 
-% which argument is output?
-outarg = 1; % id of the X(:,id) data matrix. 1: gpm
-
 % number of cross validation folds
-Kouter = 10;
-Kinner = 5;
-
-% Loss function:
-% y is test data output, yM is what the model thinks it is
-L = @(y,yM) 1/length(y) * sum((y-yM).^2); % euclidian
-
-%% declare the models --> this must be modified.
-
-% Train models
-P1 = @(X) example_model_train(X);
-P2 = @(X) example_model_train(X);
-P3 = @(X) example_model_train(X);
-
-P = {P1 P2 P3};
-
-
-% Evaluate models
-M1 = @(X, par) example_model(par, X);
-M2 = @(X, par) example_model(par, X)*2;
-M3 = @(X, par) example_model(par, X)/2;
-
-M = {M1 M2 M3};
+Kouter = 5;
+Kinner = 10;
 
 
 
@@ -85,16 +63,17 @@ for i = 1:Kouter
     Etest(i) = train_evaluate(Xinner, Xouter_test, outarg, M{s_select(i)}, P{s_select(i)}, L);
         
 end
-
 % estimate generalisation error as mean of all the outer cross val test
 % errors
 Egen = sum(CVouter.TestSize ./ length(X(:,1)) .*...
                       Etest);
 
 if ~all(s_select == s_select(1))
-    disp("Multiple different models were selected for different outer cross val folds")
+    disp("   Multiple different models were selected for different outer cross val folds")
 end
 
+
+end
 
 %% train and evaluate subroutine
 
@@ -104,6 +83,8 @@ function E = train_evaluate(Xtrain, Xtest, outarg, M, P, L)
     % train model to get parameters
     parameters = P(Xtrain);
 
+    %disp(parameters);
+    
     %%% evaluation
     % evaluate model
     o = 1:length(Xtest(1,:));
