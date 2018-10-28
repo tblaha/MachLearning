@@ -43,6 +43,9 @@ data = [array2table(id), data(:,end), data(:,1:end-1)];
 
 X = data{:,3:end}; % all but name and id
 [N,M] = size(X);
+X(:,1:7) = (X(:,1:7) - mean(X(:,1:7))) ./ std(X(:,1:7));
+% X = (X - mean(X)) ./ std(X);
+
 % note that {} are used instead of () to not keep the 'table' data type
 
 % matrix of only input arguments (excluding the fuel consumption)
