@@ -15,14 +15,22 @@ function yM = LogRegExecute(par, X, features, outarg)
     
     % code back to original 1, 2, 3 coding
     yM = zeros(a,1);
-    for i = 1:a
-        if xor(yMmat(i,1), yMmat(i,2)) % if both are different
-            yM(i) = find(yMmat(i,:)); % assign 1 if it is the first (USA), 2 if it is the second (Europe)
-        elseif ~and(yMmat(i,1), yMmat(i,2)) % if both are 0
-            yM(i) = 3; % Japan
-        else % both are 1
-            [~,yM(i)] = max(activation(i,:)); % assign the index of whichever activation is higher.
+    if length(outarg) == 2
+        for i = 1:a
+            if xor(yMmat(i,1), yMmat(i,2)) % if both are different
+                yM(i) = find(yMmat(i,:)); % assign 1 if it is the first (USA), 2 if it is the second (Europe)
+            elseif ~and(yMmat(i,1), yMmat(i,2)) % if both are 0
+                yM(i) = 3; % Japan
+            else % both are 1
+                [~,yM(i)] = max(activation(i,:)); % assign the index of whichever activation is higher.
+            end
         end
+    elseif length(outarg) == 3
+        
+        for i = 1:a
+            [~, yM(i)] = max(activation(i,:));
+        end
+        
     end
 
 end

@@ -49,10 +49,11 @@ toc %measure time
 par_best = Train(X, features, 1);
 
 
-figure()
+figure('Name', 'Generalization Error')
 plot(Egen_list)
 
-figure()
+
+figure('Name', 'Test Errors')
 plot(Etests)
 
 %% Print stopping reason

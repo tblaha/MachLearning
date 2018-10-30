@@ -28,7 +28,7 @@ k_d = 3;
 I = 10;
 
 % wave physics
-if false
+if true
     c = 0.1;
     zeta = 1;
     k_i = 0.002;

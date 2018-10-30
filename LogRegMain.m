@@ -8,7 +8,7 @@ clear
 % import data
 importdata_Report2 % one-out-of-k-coded
 
-X = X(:,1:9); % reduced one-out-of-k-coded (ommiting the last one for computational performance)
+X = X(:,1:10); % reduced one-out-of-k-coded (ommiting the last one for computational performance)
 
 %L = @(y,yM) ( sum(yM - y > 0) * r + sum(yM - y < 0) * (1-r) ) / length(y);
 L = @(y,yM) logiloss(y,yM);
@@ -34,7 +34,7 @@ errortolerance = 0.0001; % see function documentation of FwdFeatSel
 %% Fwd features selection
 
 % which argument is output?
-outarg = 8:9; % id of the X(:,id) data matrix. 1: gpm
+outarg = 8:10; % id of the X(:,id) data matrix. 1: gpm
 
 % features available are all the ones that are not the output attribute
 % this is a vector of indices in X(:,index):
