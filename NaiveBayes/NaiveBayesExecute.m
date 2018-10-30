@@ -7,7 +7,7 @@ function yM = NaiveBayesExecute(par, X, features, outarg)
     
     tl = size(X,1);  %test (set) length
     
-    nbX_test = zeros(tl,7);     %only one observation set to zeros, without output
+    nbX_test = zeros(tl, length(features));     %only one observation set to zeros, without output
     for k = 1:tl
         for j = features
             if (X(k, j) > par.mean_x_training(j))
@@ -18,7 +18,7 @@ function yM = NaiveBayesExecute(par, X, features, outarg)
     
     %% p(x= x_test | y=1,2 or 3)
 
-    p_xtest_y123 = ones(k,3);  %initializing probabilities to 1
+    p_xtest_y123 = ones(tl,3);  %initializing probabilities to 1
 
     for k = 1:tl
         for j = 1:3

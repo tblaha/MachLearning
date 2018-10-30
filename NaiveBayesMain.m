@@ -22,7 +22,7 @@ Kinner = 5;
 
 
 % fwd features selection configuration
-seed = 10; % random seed used for crossval splits
+seed = 15; % random seed used for crossval splits
 errortolerance = 0.0001; % see function documentation of FwdFeatSel
 
 
@@ -40,9 +40,15 @@ features_avail = features_avail( ~ismember(features_avail, outarg) );
 % run the fwd feature selection:
 tic %measure time
     % function [features, stoppingCriteria] = FwdFeatSel(features_avail, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, Kouter, Kinner)
-    [features, StoppingCriteria] = FeatSel(features_avail, 'bwd', X, Train, Exe, L, outarg, errortolerance, Kouter, Kinner, seed);
+    [features, StoppingCriteria, Egen_list, Etests] = FeatSel(features_avail, 'fwd', X, Train, Exe, L, outarg, errortolerance, Kouter, Kinner, seed);
 toc %measure time
 
+figure('Name', 'Generalization Error')
+plot(Egen_list)
+
+
+figure('Name', 'Test Errors')
+plot(Etests)
 
 
 %% Print stopping reason

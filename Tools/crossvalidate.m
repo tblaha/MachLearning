@@ -87,6 +87,7 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
 
     if ~all(s_select == s_select(1))
         disp("   Multiple different models were selected for different outer cross val folds")
+        disp(mat2str(s_select))
     end
 
 

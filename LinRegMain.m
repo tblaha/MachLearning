@@ -56,6 +56,8 @@ plot(Egen_list)
 figure('Name', 'Test Errors')
 plot(Etests)
 
+
+
 %% Print stopping reason
 disp(' ')
 disp(StoppingCriteria)
