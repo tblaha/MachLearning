@@ -22,7 +22,7 @@ Kinner = 5;
 
 
 % Tree level analysis configuration
-seed = 1; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 errortolerance = 0.0001;
 
 
