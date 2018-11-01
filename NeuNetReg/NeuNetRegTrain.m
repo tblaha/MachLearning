@@ -21,15 +21,21 @@ function par = NeuNetRegTrain(X, hiddenlayers, features, outarg)
     
     % transfer function, should be replaced by smth like softmax in the
     % future
-    par.transfun = @(x, w, outlayer) (outlayer == 1) * x*w + (outlayer == 0) * 1/(1 + exp(-x*w));
+    par.transfun = @(z) tanh(z);
     
     % train
     wvec0 = [ones(3,1); -ones(numpars-3,1)] ;
-    %opts = optimoptions('fminunc', 'Display', 'notify-detailed', 'OptimalityTolerance', 1e-4, 'PlotFcn', {@optimplotfval});
-    opts = optimoptions('fminunc', 'Display', 'notify-detailed', 'OptimalityTolerance', 1e-4);
+                        %'Display', 'notify-detailed',...
+    opts = optimoptions('fminunc', ...
+                        'Display', 'off',...
+                        'OptimalityTolerance', 3e-4, ...
+                        'UseParallel', true, ...
+                        'MaxFunctionEvaluations', 5000,...
+                        'PlotFcn', {@optimplotfval});
+    %opts = optimoptions('fminunc', 'Display', 'notify-detailed', 'OptimalityTolerance', 5e-4);
 
     wvecopt = fminunc(@(wvec) costfun(wvec, par, X, y, features, outarg), wvec0, opts);
-    
+        
     par.wc = parvec2cell(par.layers, wvecopt);
     
 end

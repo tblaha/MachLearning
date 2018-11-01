@@ -28,9 +28,14 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
     % features selection, then the splits must be the same for a fair
     % evaluation of the features.
     rng(seed)
+    
+    % number of model trainings
+    global n m;
 
+    m = 0;
+    n = Kouter*Kinner*length(P) + 1;
+    
     % preallocate some matrices
-    Egen_models  = zeros(1,length(M));
     Etest        = zeros(1,Kouter);
     s_select     = zeros(1,Kouter);
 
@@ -40,6 +45,8 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
     CVouter = cvpartition(X(:,1), 'Kfold', Kouter);
 
     for i = 1:Kouter
+        Egen_models  = zeros(1,length(M));
+        
         % outer training set --> inner set
         Xinner = X(CVouter.training(i),:);
 
@@ -58,10 +65,10 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
             Xinner_test = Xinner(CVinner.test(j),:);
 
             for s = 1:length(M)
-
                 Eval(s,j) = train_evaluate(Xinner_train, Xinner_test, outarg, M{s}, P{s}, L);
-
+                IfinishedmychunkImagoodlad();
             end
+            
 
         end
 
@@ -78,7 +85,9 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
 
         % optimal model outer cross val test error
         Etest(i) = train_evaluate(Xinner, Xouter_test, outarg, M{s_select(i)}, P{s_select(i)}, L);
-
+        
+        % statusupdate
+                
     end
     % estimate generalisation error as mean of all the outer cross val test
     % errors
@@ -110,5 +119,14 @@ function E = train_evaluate(Xtrain, Xtest, outarg, M, P, L)
     % validation error, invoke loss function with the output
     % arguments of the inner test set and the model output
     E = L(Xtest(:,outarg), yM);
+
+end
+
+function IfinishedmychunkImagoodlad()
+
+    global m n
+    m = m + 1;
+    
+    disp(strcat( num2str(round((m/n * 100))) , '% done'))
 
 end

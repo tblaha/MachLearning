@@ -37,20 +37,17 @@ outarg = 1; % id of the X(:,id) data matrix. 1: gpm
 % this is a vector of indices in X(:,index):
 features_avail = 1:length(X(1,:));
 features = features_avail( features_avail ~= outarg );
+features = [4 5 7];
 
 % don't do feature selection, just take all. Instead, do complexity control
-Train = @(     X) NeuNetRegTrain  (X,   [3], features, outarg); % 1 stands for first order reg
+hiddenlayers = [5 3];
+Train = @(     X) NeuNetRegTrain  (X,   hiddenlayers, features, outarg); % 1 stands for first order reg
 Exe   = @(par, X) NeuNetRegExecute(par, X  , features, outarg);
-[Egen_hist] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
+tic
+    [Egen] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
+toc
 
-par_best = Train(X, features, 1);
-
-
-figure('Name', 'Generalization Error')
-plot(Egen_list)
-
-figure('Name', 'Test Errors')
-plot(Etests)
+par_best = Train(X);
 
 
 %% output
