@@ -27,6 +27,7 @@ function par = NaiveBayesTrain(X, features, outarg) % requires non-one-out-of-k
     
     nbX(:,outarg) = X(:,outarg);
     
+    nbX
     %% p(y=1,2,3) -- priors
 
     par.p_y(1)=(sum(nbX(:,8)==1)+1)/(tl+3);  % +1 and +3 is for robustness
