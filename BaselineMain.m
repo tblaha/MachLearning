@@ -29,7 +29,7 @@ Kinner = 5;
 
 
 % Tree level analysis configuration
-seed = 2; % random seed used for crossval splits
+seed = 1; % random seed used for crossval splits
 errortolerance = 0.0001;
 
 
@@ -53,12 +53,12 @@ strikes = 10; % how many consecutive worse iterations to tolerate
 
 while true    
     % model functions
-    Train = @(     X) DecTreeTrain  (     X, features, outarg, minpar_hist(i)); % 1 stands for first order reg
-    Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
+    Train = @(     X) BaselineTrain  (     X, features, outarg, minpar_hist(i)); % 1 stands for first order reg
+    Exe   = @(par, X) BaselineExecute(par, X, features, outarg);
     
     % check best model
     [Egen_hist(i)] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
-     
+     %[Egen_hist(i)] = 1;
     % new minpar
     minpar_hist(i+1) = round(minpar_hist(i)*alpha);
     
