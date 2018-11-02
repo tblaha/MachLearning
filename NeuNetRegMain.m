@@ -38,45 +38,47 @@ outarg = 1; % id of the X(:,id) data matrix. 1: gpm
 % this is a vector of indices in X(:,index):
 features_avail = 1:length(X(1,:));
 features = features_avail( features_avail ~= outarg );
-features = [2 3 4 5 7 8];
+features = [2 3 4 5 6 7 8];
 
 % don't do feature selection, just take all. Instead, do complexity control
-hmax = 4;
-hes = 1:hmax;
-Egen_list = zeros(hmax,1);
+hmax = 14;
+hes = 10:hmax;
+%hes = 0;
+Egen_list = zeros(length(hes),1);
 
 tic
-parfor h = hes % least complex to most complex
-    hiddenlayers = hl_try(h);
+for i = 1:length(hes) % least complex to most complex
+    hiddenlayers = hl_try(hes(i));
     Train = @(     X) NeuNetRegTrain  (X,   hiddenlayers, features, outarg); % 1 stands for first order reg
     Exe   = @(par, X) NeuNetRegExecute(par, X  , features, outarg);
-       [Egen_list(h)] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
-    disp(strcat( "Top layer just finished" , num2str(h/hmax *100), "%"))
+       [Egen_list(i)] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
+    disp(strcat( "Top layer just finished" , num2str(hes(i)/hmax *100), "%"))
 end
 toc
 
-hes = 1:hmax;
-[~,best_h] = min(Egen_list);
-Egen = Egen_list(best_h);
+[~,idx] = min(Egen_list);
+Egen = Egen_list(idx);
 
+par_best = NeuNetRegTrain(X, hl_try(hes(idx)), features, outarg);
 
 
 
 %% output
 
-par_best = NeuNetRegTrain(X, hl_try(best_h), features, outarg);
 
 disp(' ')
 disp('|----- Calculations finished -----|')
 disp(' ')
-disp(strcat('Selected model features: ', mat2str(features)))
+disp(strcat('Selected number of hidden neurons: ', mat2str(hl_try(hes(idx)))))
 disp(' ')
 disp(strcat('Estimated generalisation error: ', num2str(Egen)))
 disp(' ')
 
 function hiddenlayers = hl_try(hlnum)
 
-    if hlnum <= 3
+    if hlnum == 0
+        hiddenlayers = [];
+    elseif hlnum <= 3
         hiddenlayers = [hlnum];
     elseif hlnum > 3 && hlnum <= 8
         lastl = min(round(hlnum/2),3);
