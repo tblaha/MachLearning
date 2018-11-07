@@ -1,3 +1,3 @@
-function par = BaselineTrain(X, features, outarg, minpar)
-    par=struct;
+function par = BaselineTrain(X, outarg)
+    par.mode = mode(X(:,outarg));
 end

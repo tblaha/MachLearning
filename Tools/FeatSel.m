@@ -1,4 +1,4 @@
-function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avail, fwdbwd, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, Kouter, Kinner, seed)
+function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avail, fwdbwd, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, outer_train_cell, inner_train_cell)
 %FWD_FEAT_SEL Performs fwd features selection using 2-layer crossval
 %   --- Inputs ---
 %   features_avail: vector of indices in X(:,index) corresponding to all
@@ -70,11 +70,17 @@ function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avai
         end
 
         % see which of the models is best
-        [~, s_select, Etests(j,:)] = crossvalidate(X, P, M, LossFcn, outarg, Kouter, Kinner, seed);
-        s_best = mode(s_select);
+        [~, s_select, Etests(j,:)] = crossvalidate(X, P, M, LossFcn, outarg, outer_train_cell, inner_train_cell);
+        
+        % little hack to make it prefer larger model numbers (ie not the
+        % baseline in case that more models have an equal amount of splits
+        % where they were best.
+        s_select_inv = 1000 - s_select;
+        s_best = mode(s_select_inv);
+        s_best = 1000 - s_best;
         
         % find generalization error for that model
-        current_Egen = crossvalidate(X, P(s_best), M(s_best), LossFcn, outarg, Kouter, Kinner, seed);
+        current_Egen = crossvalidate(X, P(s_best), M(s_best), LossFcn, outarg, outer_train_cell, inner_train_cell);
         
         % add to array
         Egen_list(j) = current_Egen;

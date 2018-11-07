@@ -1,4 +1,4 @@
-addpath(genpath('./'))
+addpath(genpath('../'))
 warning('off', 'all')
 
 clear
@@ -8,12 +8,12 @@ clear
 % import data
 %importdata_Report1 % non-one-out-of-k-coded
 if(version()==('9.5.0.944444 (R2018b)'))
-    %data=load('XoneoutofK.mat');
-    data=load('X.mat');
+    %data=load('../XoneoutofK.mat');
+    data=load('../X.mat');
     X=data.X;
 else
-    %run(importdata_Report2.m); %For K out of N
-    run(importdata_Report1.m); %For K
+    %importdata_Report2; %For K out of N
+    importdata_Report1; %For K
 end
 L = @(y,yM) bayesloss(y,yM);
 
@@ -22,15 +22,17 @@ L = @(y,yM) bayesloss(y,yM);
 % --> will be declared in for loop
 
 
+% Tree level analysis configuration
+seed = 2; % random seed used for crossval splits
+errortolerance = 0.0001;
 
 % cross validation configuration
 Kouter = 5;
 Kinner = 5;
 
+% generate splits
+[outer_train_cell, inner_train_cell] = genSplits(X, Kouter, Kinner, seed);
 
-% Tree level analysis configuration
-seed = 1; % random seed used for crossval splits
-errortolerance = 0.0001;
 
 
 
@@ -53,12 +55,12 @@ strikes = 10; % how many consecutive worse iterations to tolerate
 
 while true    
     % model functions
-    Train = @(     X) BaselineTrain  (     X, features, outarg, minpar_hist(i)); % 1 stands for first order reg
-    Exe   = @(par, X) BaselineExecute(par, X, features, outarg);
+    Train = @(     X) DecTreeTrain  (     X, features, outarg, minpar_hist(i)); % 1 stands for first order reg
+    Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
     
     % check best model
-    [Egen_hist(i)] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
-     %[Egen_hist(i)] = 1;
+    [Egen_hist(i), ~] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+     
     % new minpar
     minpar_hist(i+1) = round(minpar_hist(i)*alpha);
     

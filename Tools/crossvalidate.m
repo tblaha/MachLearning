@@ -1,4 +1,4 @@
-function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kinner, seed)
+function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, outercell, innercell)
 % CROSSVALIDATE Takes models, data, output attr and loss function and
 % selects to best model using K-fold validation. Also returns E_gen
 % estimate
@@ -24,50 +24,41 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
 %         test sets
 %   s_select: vector containing the best model of each outer fold
 
-    % if this function is called multiple times during for example fwd
-    % features selection, then the splits must be the same for a fair
-    % evaluation of the features.
-    rng(seed)
     
-    % number of model trainings
-    global n m;
 
-    m = 0;
-    n = Kouter*Kinner*length(P) + 1;
+    % size of splits
+    Kouter = length(outercell);
+    Kinner = size(innercell{1},2);
     
     % preallocate some matrices
     Etest        = zeros(1,Kouter);
     s_select     = zeros(1,Kouter);
 
-
-    % divide targets: CV is object and contains indeces rather than actual
-    % values
-    CVouter = cvpartition(X(:,1), 'Kfold', Kouter);
-
+    % counter
+    cnt = 0;
+    
     for i = 1:Kouter
         Egen_models  = zeros(1,length(M));
         
         % outer training set --> inner set
-        Xinner = X(CVouter.training(i),:);
+        Xinner = X(outercell{i}, :);
 
         % outer test set
-        Xouter_test = X(CVouter.test(i),:);
-
-
-        % partition inner dataset
-        CVinner = cvpartition(Xinner(:,1), 'Kfold', Kinner);
+        Xouter_test = X(~outercell{i}, :);
 
         % initialize matrices
         Eval = zeros(length(M), Kinner);
         for j = 1:Kinner 
             % training and test set
-            Xinner_train = Xinner(CVinner.training(j),:);
-            Xinner_test = Xinner(CVinner.test(j),:);
+            Xinner_train = Xinner( innercell{i}(:,j),:);
+            Xinner_test  = Xinner(~innercell{i}(:,j),:);
 
             for s = 1:length(M)
                 Eval(s,j) = train_evaluate(Xinner_train, Xinner_test, outarg, M{s}, P{s}, L);
-                IfinishedmychunkImagoodlad();
             end
+            % statusupdate
+            cnt = cnt + 1;
+            disp(cnt / (Kouter*Kinner) * 100)
             
 
         end
@@ -75,7 +66,7 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
         for s = 1:length(M)
 
             % for each s, compute estimate of generalisation error
-            Egen_models(s) = sum(CVinner.TestSize ./ CVouter.TrainSize(i) .*...
+            Egen_models(s) = sum(sum(~innercell{i},1) ./ sum(outercell{i}) .*...
                           Eval (s,:));
 
         end
@@ -86,12 +77,11 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, Kouter, Kin
         % optimal model outer cross val test error
         Etest(i) = train_evaluate(Xinner, Xouter_test, outarg, M{s_select(i)}, P{s_select(i)}, L);
         
-        % statusupdate
                 
     end
     % estimate generalisation error as mean of all the outer cross val test
     % errors
-    Egen = sum(CVouter.TestSize ./ length(X(:,1)) .*...
+    Egen = sum( sum(~outercell{i}) ./ length(outercell{i}) .*...
                           Etest);
 
     if ~all(s_select == s_select(1))
@@ -119,14 +109,5 @@ function E = train_evaluate(Xtrain, Xtest, outarg, M, P, L)
     % validation error, invoke loss function with the output
     % arguments of the inner test set and the model output
     E = L(Xtest(:,outarg), yM);
-
-end
-
-function IfinishedmychunkImagoodlad()
-
-    global m n
-    m = m + 1;
-    
-    disp(strcat( num2str(round((m/n * 100))) , '% done'))
 
 end

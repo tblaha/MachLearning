@@ -24,54 +24,47 @@ function par = NeuNetRegTrain(X, hiddenlayers, features, outarg)
     % future
     par.transfun = @(z) tanh(z);
     
-    % train
+    % init weight/bias vector
     %wvec0 = fliplr([ zeros(1, sum(par.layers(2:end)) ), ones(1,5), -ones(1,numpars-sum(par.layers(2:end))-5)])';
+    rng(2)
     wvec0 = rand(numpars,1);
     
+    % train
+    %%% using toolbox (requires backprop gradient, so not finished) 
+    %par_fortoolbox = par;
+    %par_fortoolbox.X = X;
+    %par_fortoolbox.y = y;
+    %par_fortoolbox.features = features;
+    %par_fortoolbox.outarg = outarg;
+    %opts = [1  1e-4  1e-8  1000];
+    %[wvecopt, ~] = ucminf('nnrcostfun_fortoolbox', par_fortoolbox, wvec0, opts);
+    
+    %%% using internal matlab
     opts = optimoptions('fminunc', ...
                         'Display', 'off',...
                         'OptimalityTolerance', 3e-4, ...
                         'UseParallel', true, ...
                         'MaxFunctionEvaluations', 5000,...
-                        'PlotFcn', {@optimplotfval});
-    wvecopt = fminunc(@(wvec) costfun(wvec, par, X, y, features, outarg), wvec0, opts);
+                        'FiniteDifferenceType', 'forward');%,...
+                        %'PlotFcn', {@optimplotfval});
+    wvecopt = fminunc(@(wvec) nnrcostfun(wvec, par, X, y, features, outarg), wvec0, opts);
     
+    
+    %%% using internal matlab
+    %opts = optimoptions('fmincon', ...
+    %                    'Display', 'off',...
+    %                    'OptimalityTolerance', 3e-4, ...
+    %                    'UseParallel', true, ...
+    %                    'MaxFunctionEvaluations', 5000,...
+    %                    'PlotFcn', {@optimplotfval});
+    %wvecopt = fmincon(@(wvec) nnrcostfun(wvec, par, X, y, features, outarg), wvec0, [], [], [], [], [], [], [], opts);
+    
+    % collect final parameters
     par.p = parvec2cell(par.layers, wvecopt);
     
 end
 
-function p = parvec2cell(layers, wvec)
-
-    p.w = cell(size(layers, 2)-1, 1);
-    p.b = cell(size(layers, 2)-1, 1);
-    m = 1;
-    
-    % weights
-    for i = 1:size(layers, 2)-1
-        p.w{i} = zeros(layers(i), layers(i+1));
-        for j = 1:layers(i+1)
-            for k = 1:layers(i)
-                p.w{i}(k,j) = wvec(m);
-                m = m + 1;
-            end
-        end
-    end
-    
-    % biases
-    for i = 1:size(layers,2)-1
-        for j = 1:layers(i+1)
-            p.b{i}(j) = wvec(m);
-            m = m + 1;
-        end
-    end
-
-end
 
 
-function c = costfun(wvec, par, X, y, features, outarg)
 
-    par.p = parvec2cell(par.layers, wvec);
-    yM = NeuNetRegExecute(par, X, features, outarg);
-    c = 1/length(y) * sum(abs(y-yM).^2); % euclidian
-    
-end
+
