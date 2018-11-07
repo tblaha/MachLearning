@@ -1,4 +1,4 @@
-addpath(genpath('./'))
+addpath(genpath('../'))
 warning('off', 'all')
 
 clear
@@ -15,15 +15,18 @@ L = @(y,yM) bayesloss(y,yM);
 % --> will be declared in for loop
 
 
+% Tree level analysis configuration
+seed = 1; % random seed used for crossval splits
+errortolerance = 0.0001;
 
 % cross validation configuration
 Kouter = 5;
-Kinner = 10;
+Kinner = 5;
+
+% generate splits
+[outer_train_cell, inner_train_cell] = genSplits(X, Kouter, Kinner, seed);
 
 
-% Tree level analysis configuration
-seed = 19; % random seed used for crossval splits
-errortolerance = 0.0001;
 
 
 
@@ -50,7 +53,7 @@ while true
     Exe   = @(par, X) KNNExecute(par, X, features, outarg);
     
     % check best model
-    [Egen_hist(i)] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
+    [Egen_hist(i)] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
      
     % new minpar
     neighbours_hist(i+1) = neighbours_hist(i)+1;
@@ -78,7 +81,7 @@ grid on
 
 
 % return tree
-outtree = KNNTrain  (X, features, outarg, neighbours);
+outtree = KNNTrain(X, features, outarg, neighbours);
 
 %% output
 

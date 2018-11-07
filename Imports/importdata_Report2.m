@@ -72,6 +72,6 @@ Y = data{:,4:end};
 
 %% clean up workspace
 
-save('XoneoutofK', 'X')
+%save('XoneoutofK', 'X')
 
 clear id horse len desc i

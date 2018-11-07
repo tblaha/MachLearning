@@ -1,4 +1,4 @@
-addpath(genpath('./'))
+addpath(genpath('../'))
 warning('off', 'all')
 
 clear
@@ -16,16 +16,17 @@ p_dist = @(y,yM,p) 1/length(y) * sum(abs(y-yM).^p);
 L = @(y,yM) p_dist(y, yM, 2);   % euclidian  p = 2
 %L = @(y,yM) p_dist(y, yM, 1);   % city block p = 1
 
-% model functions will be configured later
+
+% complexity control parameters
+seed = 1; % random seed used for crossval splits
+errortolerance = 0.001; % see function documentation of FeatSel, works well
 
 % cross validation configuration
 Kouter = 5;
 Kinner = 5;
 
-% complexity control parameters
-seed = 4; % random seed used for crossval splits
-errortolerance = 0.001; % see function documentation of FeatSel, works well
-
+% generate splits
+[outer_train_cell, inner_train_cell] = genSplits(X, Kouter, Kinner, seed);
 
 
 
@@ -42,25 +43,29 @@ features = [2 3 4 5 6 7 8];
 
 % don't do feature selection, just take all. Instead, do complexity control
 hmax = 14;
-hes = 10:hmax;
+hes = 2:4;
 %hes = 0;
-Egen_list = zeros(length(hes),1);
 
-tic
+Train = cell(length(hes), 1);
+Exe   = cell(length(hes), 1);
+
 for i = 1:length(hes) % least complex to most complex
     hiddenlayers = hl_try(hes(i));
-    Train = @(     X) NeuNetRegTrain  (X,   hiddenlayers, features, outarg); % 1 stands for first order reg
-    Exe   = @(par, X) NeuNetRegExecute(par, X  , features, outarg);
-       [Egen_list(i)] = crossvalidate(X, {Train}, {Exe}, L, outarg, Kouter, Kinner, seed);
-    disp(strcat( "Top layer just finished" , num2str(hes(i)/hmax *100), "%"))
+    Train{i} = @(     X) NeuNetRegTrain  (X,   hiddenlayers, features, outarg); % 1 stands for first order reg
+    Exe{i}   = @(par, X) NeuNetRegExecute(par, X  , features, outarg);
 end
+
+tic
+[Egen, s_select, Etest] = crossvalidate(X, Train, Exe, L, outarg, outer_train_cell, inner_train_cell);
 toc
 
-[~,idx] = min(Egen_list);
-Egen = Egen_list(idx);
+[~,s_idx] = min(Egen);
+Egen_best = Egen(s_idx);
+idx = s_select(s_idx);
 
 par_best = NeuNetRegTrain(X, hl_try(hes(idx)), features, outarg);
 
+plot(Egen)
 
 
 %% output
@@ -71,7 +76,7 @@ disp('|----- Calculations finished -----|')
 disp(' ')
 disp(strcat('Selected number of hidden neurons: ', mat2str(hl_try(hes(idx)))))
 disp(' ')
-disp(strcat('Estimated generalisation error: ', num2str(Egen)))
+disp(strcat('Estimated generalisation error: ', num2str(Egen_best)))
 disp(' ')
 
 function hiddenlayers = hl_try(hlnum)
