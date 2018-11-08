@@ -7,7 +7,7 @@ function par = NeuNetRegTrain(X, hiddenlayers, features, outarg)
     
     % select inputs
     features = features( features ~= outarg ); % extra safety...
-    X = X(:,~ismember(1:a,outarg));
+    X = X(:,features);
     
     
     % form layer row vector

@@ -16,7 +16,9 @@ desc = {'gpm', 'cylinders', 'displacement', 'horsepower', 'weight', 'accellerati
 data.Properties.VariableNames = desc; % add descriptors as table column names
 
 %%% invert mpg for better linear correlations
-%data.gpm = 1./data.gpm;
+data.gpm = 1./data.gpm;
+data.accelleration = 1./data.accelleration;
+data.weight = 1./data.weight;
 
 %%% fix horsepower column
 % remove rows with unknown horsepower
