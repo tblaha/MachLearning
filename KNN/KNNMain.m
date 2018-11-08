@@ -6,7 +6,14 @@ clear
 %% Configuration
 
 % import data
-importdata_Report1 % non-one-out-of-k-coded
+if(version()==('9.5.0.944444 (R2018b)'))
+    %data=load('../XoneoutofK.mat');
+    data=load('../X.mat');
+    X=data.X;
+else
+    %importdata_Report2; %For K out of N
+    importdata_Report1; %For K
+end
 
 L = @(y,yM) bayesloss(y,yM);
 
@@ -16,7 +23,7 @@ L = @(y,yM) bayesloss(y,yM);
 
 
 % Tree level analysis configuration
-seed = 1; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 errortolerance = 0.0001;
 
 % cross validation configuration
@@ -77,6 +84,9 @@ end
 
 figure('Name', 'Generalization Error')
 plot(neighbours_hist(1:end-1),Egen_hist)
+title('Generalization error of KNN')
+xlabel('Parameter: Number of neighbours')
+ylabel('Generalization error')
 grid on
 
 

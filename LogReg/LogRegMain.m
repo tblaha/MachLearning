@@ -6,7 +6,14 @@ clear
 %% Configuration
 
 % import data
-importdata_Report2 % one-out-of-k-coded
+if(version()==('9.5.0.944444 (R2018b)'))
+    data=load('../XoneoutofK.mat');
+    %data=load('../X.mat');
+    X=data.X;
+else
+    importdata_Report2; %For K out of N
+    %importdata_Report1; %For K
+end
 
 X = X(:,1:10); % reduced one-out-of-k-coded (ommiting the last one for computational performance)
 
@@ -20,7 +27,7 @@ Train = @(X, feats, o)      LogRegTrain  (    X, feats, o); % 1 stands for first
 Exe   = @(par, X, feats, o) LogRegExecute(par,X, feats, o);
 
 % fwd features selection configuration
-seed = 12; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 errortolerance = 0.0001; % see function documentation of FwdFeatSel
 
 % cross validation configuration
@@ -68,8 +75,6 @@ M{1} = @(par, X) Exe    (par, X, features, outarg);
 
 % "crossvalidate" with only one model --> just to get generalization error
 [Egen, ~] = crossvalidate(X, P, M, L, outarg, outer_train_cell, inner_train_cell);
-
-
 
 %% output
 

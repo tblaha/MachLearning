@@ -6,7 +6,14 @@ clear
 %% Configuration
 
 % import data
-importdata_Report1 % non-one-out-of-k-coded
+if(version()==('9.5.0.944444 (R2018b)'))
+    %data=load('../XoneoutofK.mat');
+    data=load('../X.mat');
+    X=data.X;
+else
+    %importdata_Report2; %For K out of N
+    importdata_Report1; %For K
+end
 
 L = @(y,yM) bayesloss(y,yM);
 
@@ -17,7 +24,7 @@ Exe   = @(par, X, feats, o) NaiveBayesExecute(par, X, feats, o);
 
 
 % fwd features selection configuration
-seed = 15; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 errortolerance = 0.0001; % see function documentation of FwdFeatSel
 
 % cross validation configuration

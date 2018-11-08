@@ -83,6 +83,9 @@ end
 
 figure('Name', 'Generalization Error')
 plot(minpar_hist(1:end-1),Egen_hist)
+title('Generalization error of Decision tree')
+xlabel('Parameter: Minimum parents')
+ylabel('Generalization error')
 grid on
 set(gca, 'XDir','reverse')
 

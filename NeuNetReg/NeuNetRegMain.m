@@ -6,7 +6,14 @@ clear
 %% Configuration
 
 % import data
-importdata_Report1 % non-one-out-of-k-coded
+if(version()==('9.5.0.944444 (R2018b)'))
+    %data=load('../XoneoutofK.mat');
+    data=load('../X.mat');
+    X=data.X;
+else
+    %importdata_Report2; %For K out of N
+    importdata_Report1; %For K
+end
 
 % p-norm:
 p_dist = @(y,yM,p) 1/length(y) * sum(abs(y-yM).^p);
@@ -18,7 +25,7 @@ L = @(y,yM) p_dist(y, yM, 2);   % euclidian  p = 2
 
 
 % complexity control parameters
-seed = 1; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 errortolerance = 0.001; % see function documentation of FeatSel, works well
 
 % cross validation configuration
