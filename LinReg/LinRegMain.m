@@ -22,7 +22,7 @@ Exe   = @(par,X, feats, o) LinRegExecute(par,X,feats,o);
 
 
 % fwd features selection configuration
-seed = 4; % random seed used for crossval splits
+seed = 1; % random seed used for crossval splits
 errortolerance = 0.001; % see function documentation of FeatSel, works well
 
 % cross validation configuration

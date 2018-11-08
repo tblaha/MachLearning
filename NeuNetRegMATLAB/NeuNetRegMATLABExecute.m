@@ -10,7 +10,7 @@ function yM = NeuNetRegMATLABExecute(par, X, features, outarg)
     a = size(X,1);
     
     % evaluate
-    yM = sim(par, X')';
+    yM = sim(par.net, X')';
     
 
 end

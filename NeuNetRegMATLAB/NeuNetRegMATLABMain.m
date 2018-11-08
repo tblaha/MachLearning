@@ -65,7 +65,6 @@ idx = s_select(s_idx);
 
 par_best = NeuNetRegMATLABTrain(X, hl_try(hes(idx)), features, outarg);
 
-plot(Egen)
 
 
 %% output
@@ -83,10 +82,10 @@ function hiddenlayers = hl_try(hlnum)
 
     if hlnum == 0
         hiddenlayers = [];
-    elseif hlnum <= 10
+    elseif hlnum <= 3
         hiddenlayers = [hlnum];
-    elseif hlnum > 10
-        lastl = min(round(hlnum/2),8);
+    elseif hlnum > 3
+        lastl = min(round(hlnum/2),3);
         hiddenlayers = [hlnum - lastl,lastl];
     end
         

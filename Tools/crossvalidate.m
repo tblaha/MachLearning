@@ -84,6 +84,7 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, outercell, 
     Egen = sum( sum(~outercell{i}) ./ length(outercell{i}) .*...
                           Etest);
 
+                      
     if ~all(s_select == s_select(1))
         disp("   Multiple different models were selected for different outer cross val folds")
         disp(mat2str(s_select))

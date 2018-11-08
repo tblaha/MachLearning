@@ -15,13 +15,13 @@ function par = NeuNetRegMATLABTrain(X, hiddenlayers, features, outarg)
     % configure net
     net = fitnet(hiddenlayers);
     net.trainParam.showWindow  = 0;
-    net.divideParam.testRatio  = 0;
+    net.divideParam.testRatio  = 0.0;
     net.divideParam.trainRatio = 1;
-    net.divideParam.valRatio   = 0;
+    net.divideParam.valRatio   = 0.0;
     
     % train
-    [par, ~] = train(net, X', y');
-
+    [par.net, par.tr] = train(net, X', y');
+    
 
     
 end
