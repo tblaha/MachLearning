@@ -26,7 +26,7 @@ Kinner = 5;
 
 
 % Tree level analysis configuration
-seed = 1; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 
 % generate splits
 [outer_train_cell, inner_train_cell] = genSplits(X, Kouter, Kinner, seed);

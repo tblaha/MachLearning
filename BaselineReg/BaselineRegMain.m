@@ -24,7 +24,7 @@ p_dist = @(y,yM,p) 1/length(y) * sum(abs(y-yM).^p);
 L = @(y,yM) p_dist(y, yM, 2);   % euclidian  p = 2
 
 % Tree level analysis configuration
-seed = 1; % random seed used for crossval splits
+seed = 2; % random seed used for crossval splits
 
 % cross validation configuration
 Kouter = 5;
