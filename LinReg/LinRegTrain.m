@@ -3,11 +3,15 @@ function par = LinRegTrain(X, degree, features, outarg)
     % basis functions, simple linear with one constant term for now
     switch degree
         case 1
-            par.vdm = @(X,lengthX) [ones(lengthX,1), X];
+            par.vdm = @(X,lengthX) [ones(lengthX, 1), X];
             %par.vdm = @(X,lengthX) X;
             
         case 2
-            par.vdm = @(X,lengthX) [ones(lengthX,1), X, X.^2];
+            par.vdm = @(X,lengthX) [ones(lengthX, 1), X, X.^2];
+            
+        case -1
+            par.vdm = @(X,lengthX) [ones(lengthX, 1), 1./X];
+            
     end
     
     % select output

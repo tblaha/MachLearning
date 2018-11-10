@@ -1,4 +1,4 @@
-function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, outercell, innercell)
+function [Egen, s_select, Etest, Etrain] = crossvalidate(X, P, M, L, outarg, outercell, innercell)
 % CROSSVALIDATE Takes models, data, output attr and loss function and
 % selects to best model using K-fold validation. Also returns E_gen
 % estimate
@@ -32,6 +32,7 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, outercell, 
     
     % preallocate some matrices
     Etest        = zeros(1,Kouter);
+    Etrain       = zeros(1,Kouter);
     s_select     = zeros(1,Kouter);
 
     % counter
@@ -75,7 +76,7 @@ function [Egen, s_select, Etest] = crossvalidate(X, P, M, L, outarg, outercell, 
         [~, s_select(i)] = min(Egen_models); 
 
         % optimal model outer cross val test error
-        Etest(i) = train_evaluate(Xinner, Xouter_test, outarg, M{s_select(i)}, P{s_select(i)}, L);
+        [Etest(i), Etrain(i)] = train_evaluate(Xinner, Xouter_test, outarg, M{s_select(i)}, P{s_select(i)}, L);
         
                 
     end
@@ -95,20 +96,26 @@ end
 
 %% train and evaluate subroutine
 
-function E = train_evaluate(Xtrain, Xtest, outarg, M, P, L)
+function [Etest, Etrain] = train_evaluate(Xtrain, Xtest, outarg, M, P, L)
 
     %%% training
     % train model to get parameters
     parameters = P(Xtrain);
     
+    
     %%% evaluation
-    % evaluate model
     o = 1:length(Xtest(1,:));
     o = o(~ismember(o,outarg)); % do not pass the output argument to the model.
+    % training set
+    yT = M(parameters, Xtrain(:,o));
+    % training error
+    Etrain = L(Xtrain(:,outarg), yT);
+    
+    % test set
     yM = M(parameters, Xtest(:,o));
 
     % validation error, invoke loss function with the output
     % arguments of the inner test set and the model output
-    E = L(Xtest(:,outarg), yM);
+    Etest = L(Xtest(:,outarg), yM);
 
 end
