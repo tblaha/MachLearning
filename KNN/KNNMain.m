@@ -83,12 +83,12 @@ while true
 end
 
 figure('Name', 'Generalization Error')
-plot(neighbours_hist(1:end-1),Egen_hist)
+plot(neighbours_hist(1:end-1),Egen_hist,'--','LineWidth',1.5)
 title('Generalization error of KNN')
 xlabel('Parameter: Number of neighbours')
 ylabel('Generalization error')
 grid on
-
+saveas(gcf,'DecTree_genErr','epsc')
 
 % return tree
 outtree = KNNTrain(X, features, outarg, neighbours);
