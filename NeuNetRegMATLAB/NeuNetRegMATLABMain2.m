@@ -46,30 +46,42 @@ hmax = 14;
 hes = 2:hmax;
 %hes = 0;
 
-Train = cell(length(hes), 1);
-Exe   = cell(length(hes), 1);
 
 for i = 1:length(hes) % least complex to most complex
     hiddenlayers = hl_try(hes(i));
-    Train{i} = @(     X) NeuNetRegMATLABTrain  (X,   hiddenlayers, features, outarg); % 1 stands for first order reg
-    Exe{i}   = @(par, X) NeuNetRegMATLABExecute(par, X  , features, outarg);
+    Train = cell(1, 1);
+    Exe   = cell(1, 1);
+    Train{1} = @(     X) NeuNetRegMATLABTrain  (X,   hiddenlayers, features, outarg); % 1 stands for first order reg
+    Exe{1}   = @(par, X) NeuNetRegMATLABExecute(par, X  , features, outarg);
+    [Egen(i), s_select(i,:), Etest(i,:), Etrain(i,:)] = crossvalidate(X, Train, Exe, L, outarg, outer_train_cell, inner_train_cell);
+    disp(i)
 end
 
-tic
-    [Egen, s_select, Etest, Etrain] = crossvalidate(X, Train, Exe, L, outarg, outer_train_cell, inner_train_cell);
-toc
+%tic
+%[Egen, s_select, Etest, Etrain] = crossvalidate(X, Train, Exe, L, outarg, outer_train_cell, inner_train_cell);
+%toc
 
+[~,s_idx] = min(Egen);
+Egen_best = Egen(s_idx);
+idx = s_select(s_idx);
 
-% retrain the best model and report generalization error
-s_idx = mode(s_select); % best model
-Train_best{1} = @(     X) NeuNetRegMATLABTrain  (X,   hl_try(hes(s_idx)), features, outarg);
-Exe_best{1}   = @(par, X) NeuNetRegMATLABExecute(par, X  , features, outarg);
-Egen_best = crossvalidate(X, Train_best, Exe_best, L, outarg, outer_train_cell, inner_train_cell);
+par_best = NeuNetRegMATLABTrain(X, hl_try(hes(idx)), features, outarg);
 
-% train yet another time on the full set to get the best possible
-% parameters for possible future integration.
-par_best = NeuNetRegMATLABTrain(X, hl_try(hes(s_idx)), features, outarg);
+%% plotting
 
+genvstrainErr = figure('Name', 'Training and Generalization Error', 'Position', [100 100 600 400], 'visible', 'on');
+hold on
+    plot(hes, Egen, '-', 'LineWidth', 1.5)
+    plot(hes, mean(Etrain, 2), '--', 'LineWidth', 1.5)
+hold off
+xticks(hes)
+ylim([0,0.5])
+grid on
+xlabel('Hidden Neurons')
+ylabel('Normalized euclidian distance')
+title('Generalization and Training Error')
+legend({'Gen. Error Estimate', 'Mean of Training Error'}, 'Location', 'NorthWest')
+saveas(genvstrainErr, 'Plots/ANN_gentrainErr.eps', 'epsc')
 
 
 %% output

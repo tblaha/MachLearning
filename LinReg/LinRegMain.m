@@ -55,19 +55,55 @@ features_avail = features_avail( features_avail ~= outarg );
 % run the fwd feature selection:
 tic %measure time
     % function [features, stoppingCriteria] = FwdFeatSel(features_avail, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, Kouter, Kinner)
-    [features, StoppingCriteria, Egen_list, Etests] = FeatSel(features_avail, 'fwd', X, Train, Exe, L, outarg, errortolerance, outer_train_cell, inner_train_cell);
+    [features, StoppingCriteria, Egen_list, Etests, feat_hist, Etrain] = FeatSel(features_avail, 'fwd', X, Train, Exe, L, outarg, errortolerance, outer_train_cell, inner_train_cell);
 toc %measure time
 
 par_best = Train(X, features, 1);
 
 
-figure('Name', 'Generalization Error')
-plot(Egen_list)
+%% plotting
 
+genErr = figure('Name', 'Generalization Error', 'Position', [100 100 600 400], 'visible', 'off');
+plot(Egen_list, '-', 'LineWidth', 1.5)
+grid on
+xticks(1:length(Egen_list))
+xticklabels(feat_hist)
+xlabel('Added features')
+ylabel('Normalized euclidian distance')
+title('Generalization Error')
+legend({'Best Performing Model'})
+saveas(genErr, 'Plots/LinReg_genErr.eps', 'epsc')
 
-figure('Name', 'Test Errors')
-plot(Etests)
+gen_trainErr = figure('Name', 'Test/Train Errors', 'Position', [100 100 600 400], 'visible', 'off');
+hold on
+    plot(sum(Etests,2)/Kouter, '-', 'LineWidth', 1.5)
+    plot(sum(Etrain,2)/Kouter, '--', 'LineWidth', 1.5)
+hold off
+grid on
+xticks(1:length(Egen_list))
+xticklabels(feat_hist)
+legend({'Generalization Error', 'Avg of Training Errors'})
+xlabel('Added features')
+ylabel('Normalized euclidian distance')
+title('Outer layer Test/Training Errors during fwd feature selection')
+saveas(gen_trainErr, 'Plots/LinReg_gen_trainErr.eps', 'epsc')
 
+testErr = figure('Name', 'Test Errors', 'Position', [100 100 600 400], 'visible', 'off');
+hold on
+    plot(Etests(:,1), '-', 'LineWidth', 1.5)
+    plot(Etests(:,2), '--', 'LineWidth', 1.5)
+    plot(Etests(:,3), ':', 'LineWidth', 1.5)
+    plot(Etests(:,4), '-.', 'LineWidth', 1.5)
+    plot(Etests(:,5), '-', 'LineWidth', 3)
+hold off
+grid on
+xticks(1:length(Egen_list))
+xticklabels(feat_hist)
+legend({'Outer Fold 1', 'Outer Fold 2', 'Outer Fold 3', 'Outer Fold 4', 'Outer Fold 5'})
+xlabel('Added features')
+ylabel('Normalized euclidian distance')
+title('Test errors during fwd feature selection (best model of each split)')
+saveas(testErr, 'Plots/LinReg_testErr.eps', 'epsc')
 
 
 %% Print stopping reason
