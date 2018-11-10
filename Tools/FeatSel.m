@@ -40,7 +40,11 @@ function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avai
         features = features_avail;
     end
     
-    j = 1;
+    j = 2;
+    P{1} = @(X)      TrainFcn  (X,      1:7, outarg);
+    M{1} = @(par, X) ExeFcn    (par, X, 1:7, outarg);
+    [ Egen_list(1), ~, Etests(1,:)] = crossvalidate(X, P, M, LossFcn, outarg, outer_train_cell, inner_train_cell);
+
     
     while 1
         

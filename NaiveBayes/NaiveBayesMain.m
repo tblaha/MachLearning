@@ -24,7 +24,7 @@ Exe   = @(par, X, feats, o) NaiveBayesExecute(par, X, feats, o);
 
 
 % fwd features selection configuration
-seed = 2; % random seed used for crossval splits
+seed = 4; % random seed used for crossval splits
 errortolerance = 0.0001; % see function documentation of FwdFeatSel
 
 % cross validation configuration
@@ -50,6 +50,13 @@ tic %measure time
     % function [features, stoppingCriteria] = FwdFeatSel(features_avail, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, Kouter, Kinner)
     [features, StoppingCriteria, Egen_list, Etests] = FeatSel(features_avail, 'bwd', X, Train, Exe, L, outarg, errortolerance, outer_train_cell, inner_train_cell);
 toc %measure time
+%features=[2 3 4];
+%Train = @(     X) NaiveBayesTrain  (     X, features, outarg); % 1 stands for first order reg
+%Exe   = @(par, X) NaiveBayesExecute(par, X, features, outarg);
+    
+    % check best model
+    %[Egen_ist] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+
 
 figure('Name', 'Generalization Error')
 plot(Egen_list)

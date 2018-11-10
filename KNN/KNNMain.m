@@ -23,7 +23,7 @@ L = @(y,yM) bayesloss(y,yM);
 
 
 % Tree level analysis configuration
-seed = 2; % random seed used for crossval splits
+seed = 3; % random seed used for crossval splits
 errortolerance = 0.0001;
 
 % cross validation configuration
@@ -83,7 +83,7 @@ while true
 end
 
 figure('Name', 'Generalization Error')
-plot(neighbours_hist(1:end-1),Egen_hist)
+plot(neighbours_hist(1:end-1),Egen_hist,'--','Linewidth',1.5)
 title('Generalization error of KNN')
 xlabel('Parameter: Number of neighbours')
 ylabel('Generalization error')
