@@ -3,7 +3,7 @@ close all
 %% this tests for significant model improvments for the regressions
 
 Etest{1} = [0.3846    0.3418    0.3924    0.3590    0.3974]; % Baseline
-Etest{2} = [0.2436    0.2532    0.2532    0.2051    0.1795]; % KNN
+Etest{2} = [0.2179    0.2278    0.1772    0.2308    0.2436]; % KNN
 Etest{3} = [0.1538    0.1392    0.1392    0.1923    0.1667]; % DecTree
 z(1,:) = Etest{1} - Etest{2}; % KNN vs Baseline
 z(2,:) = Etest{2} - Etest{3}; % DecTree vs KNN

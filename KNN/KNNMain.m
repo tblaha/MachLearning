@@ -100,7 +100,7 @@ title('Generalization error of KNN')
 xlabel('Parameter: Number of neighbours')
 ylabel('Generalization error')
 grid on
-saveas(gcf,'DecTree_genErr','epsc')
+%saveas(gcf,'De_genErr','epsc')
 
 % return tree
 outtree = KNNTrain(X, features, outarg, neighbours);
