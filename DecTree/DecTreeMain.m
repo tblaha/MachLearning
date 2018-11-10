@@ -64,7 +64,7 @@ for sc = 1:length(splc)
         Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
 
         % check best model
-        [Egen_hist(sc,i), Etest] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+        [Egen_hist(sc,i), ~] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
 
         % new minpar
         minpar_hist(sc, i+1) = round(minpar_hist(sc,i)*alpha);
@@ -85,14 +85,19 @@ for sc = 1:length(splc)
         i = i + 1;
 
     end
+    
 end
-
+%%
+minpar_temp=6;
+  Train = @(     X) DecTreeTrain  (     X, features, outarg, minpar_temp, 'gdi'); % 1 stands for first order reg
+       Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
+ [~,~, Etest] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
 %%
 figure('Name', 'Generalization Error')
 hold on
-plot(minpar_hist(1,1:end-5),Egen_hist(1,1:end-4), 'LineWidth', 1.5)
-plot(minpar_hist(2,1:end-5),Egen_hist(2,1:end-4),':', 'LineWidth', 1.5)
-plot(minpar_hist(3,1:end-5),Egen_hist(3,1:end-4),'--', 'LineWidth', 1.5)
+    plot(minpar_hist(1,1:end-5),Egen_hist(1,1:end-4), 'LineWidth', 1.5)
+    plot(minpar_hist(2,1:end-5),Egen_hist(2,1:end-4),':', 'LineWidth', 1.5)
+    plot(minpar_hist(3,1:end-5),Egen_hist(3,1:end-4),'--', 'LineWidth', 1.5)
 legend('Ginis diversity index','Twoing rule', 'Cross entropy')
 hold off
 title('Generalization error of Decision tree')
@@ -101,9 +106,6 @@ ylabel('Generalization error')
 grid on
 set(gca, 'XDir','reverse')
 saveas(gcf,'DecTree_genErr','epsc')
-
-figure('Name', 'Etest')
-plot(Etest)
 
 %%
 % return tree

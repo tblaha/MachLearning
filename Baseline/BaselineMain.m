@@ -49,7 +49,7 @@ Train = @(     X) BaselineTrain(X, outarg); % 1 stands for first order reg
 Exe   = @(par, X) BaselineExecute(par, X);
 
 % compute
-[Egen] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+[Egen,~,Etest] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
 
 %% output
 

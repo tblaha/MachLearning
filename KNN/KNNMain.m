@@ -81,7 +81,19 @@ while true
     i = i + 1;
        
 end
+%%
+[~, idx] = min(Egen_hist);
+best_nei = neighbours_hist(idx);
 
+% model functions
+    Train = @(     X) KNNTrain  (     X, features, outarg, best_nei); % 1 stands for first order reg
+    Exe   = @(par, X) KNNExecute(par, X, features, outarg);
+    
+    % check best model
+    [~,~, Etest] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+
+
+%%
 figure('Name', 'Generalization Error')
 plot(neighbours_hist(1:end-1),Egen_hist,'--','LineWidth',1.5)
 title('Generalization error of KNN')
