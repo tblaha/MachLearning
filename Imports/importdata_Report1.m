@@ -59,4 +59,4 @@ Y = data{:,4:end};
 
 %save('X', 'X')
 
-clear id horse len desc i
+clear id horse len i

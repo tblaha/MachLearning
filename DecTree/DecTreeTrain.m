@@ -1,4 +1,4 @@
-function par = DecTreeTrain(X, features, outarg, minpar)
+function par = DecTreeTrain(X, features, outarg, minpar, split)
     
     %% Preparing
     
@@ -35,19 +35,18 @@ function par = DecTreeTrain(X, features, outarg, minpar)
     %boxplot(zscore(X), attributeNames, 'LabelOrientation', 'inline');
 
     %Removing outliers from data set
-    %idxOutlier = find(X(:,4)>200 | X(:,6)>21.9 | X(:,6)<9 | X(:,1)>0.09);
+    %idxOutlier = find(X(:,4)>2.48 | X(:,6)>2.3 | X(:,6)<-2.3);
     %X(idxOutlier,:) = [];
     %y(idxOutlier) = [];
 
     %% Fit the tree
     
     par = fitctree(X, classNames(y), ...
-       'splitcriterion', 'gdi', ...
+       'splitcriterion', split, ...
        'categorical', [], ...
        'PredictorNames', attributeNames, ...
        'prune', 'off', ...
-       'minparent', minpar);
-
-
+       'minparent', minpar, ...
+       'Surrogate', 'on');
 
 end

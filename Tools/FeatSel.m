@@ -1,4 +1,4 @@
-function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avail, fwdbwd, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, outer_train_cell, inner_train_cell)
+function [features, stoppingCriteria, Egen_list, Etests, feathist, Etrain] = FeatSel(features_avail, fwdbwd, X, TrainFcn, ExeFcn, LossFcn, outarg, ErrorTol, outer_train_cell, inner_train_cell)
 %FWD_FEAT_SEL Performs fwd features selection using 2-layer crossval
 %   --- Inputs ---
 %   features_avail: vector of indices in X(:,index) corresponding to all
@@ -46,6 +46,8 @@ function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avai
     [ Egen_list(1), ~, Etests(1,:)] = crossvalidate(X, P, M, LossFcn, outarg, outer_train_cell, inner_train_cell);
 
     
+    feathist = [];
+    
     while 1
         
         previous_Egen = current_Egen;
@@ -74,7 +76,7 @@ function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avai
         end
 
         % see which of the models is best
-        [~, s_select, Etests(j,:)] = crossvalidate(X, P, M, LossFcn, outarg, outer_train_cell, inner_train_cell);
+        [~, s_select, Etests(j,:), Etrain(j,:)] = crossvalidate(X, P, M, LossFcn, outarg, outer_train_cell, inner_train_cell);
         
         % little hack to make it prefer larger model numbers (ie not the
         % baseline in case that more models have an equal amount of splits
@@ -114,6 +116,8 @@ function [features, stoppingCriteria, Egen_list, Etests] = FeatSel(features_avai
         else
             features = features(features ~= best_feature);
         end
+        
+        feathist = [feathist, best_feature];
 
         % new available features are
         features_avail = features_avail( features_avail ~= best_feature );

@@ -2,17 +2,16 @@ clear
 close all
 %% this tests for significant model improvments for the regressions
 
-Etest{1} = [0.9973    1.0468    1.0978    0.9206    0.9236]; % Baseline
-%Etest{2} = [0.1399 0.1079 0.1279 0.1022 0.1567]; % lin reg
-Etest{2} = [0.1248    0.1050    0.1227    0.0986    0.1351]; % lin reg 2
-Etest{3} = [0.1068    0.0873    0.0978    0.1054    0.1135]; % ANN
-z(1,:) = Etest{1} - Etest{2}; % LinReg vs Baseline
-z(2,:) = Etest{2} - Etest{3}; % ANN vs LinReg
-z(3,:) = Etest{1} - Etest{3}; % ANN vs Baseline
+Etest{1} = [0.3846    0.3418    0.3924    0.3590    0.3974]; % Baseline
+Etest{2} = [0.2436    0.2532    0.2532    0.2051    0.1795]; % KNN
+Etest{3} = [0.1538    0.1392    0.1392    0.1923    0.1667]; % DecTree
+z(1,:) = Etest{1} - Etest{2}; % KNN vs Baseline
+z(2,:) = Etest{2} - Etest{3}; % DecTree vs KNN
+z(3,:) = Etest{1} - Etest{3}; % DecTree vs Baseline
 
-name{1} = {'LinReg', 'Baseline'};
-name{2} = {'ANN', 'LinReg'};
-name{3} = {'ANN', 'Baseline'};
+name{1} = {'KNN', 'Baseline'};
+name{2} = {'DecTree', 'KNN'};
+name{3} = {'DecTree', 'Baseline'};
 
 alpha = 0.1;
 

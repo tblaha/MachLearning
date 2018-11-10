@@ -47,60 +47,81 @@ outarg = 8; % id of the X(:,id) data matrix. 1: gpm
 features_avail = 1:6; % no year as it is not useful
 features = features_avail( ~ismember(features_avail, outarg) );
 
+
+splc = {'gdi', 'twoing', 'deviance'};
+
 Egen_hist = [];
-minpar_hist = [70]; % the lower, the more complex the tree
+minpar_hist = ones(length(splc),1) .* 70; % the lower, the more complex the tree
 alpha = 0.8; % decrease minpar by (roughly) (1-alpha) *100 percent every iteration
-i = 1;
 strikes = 10; % how many consecutive worse iterations to tolerate
 
-while true    
-    % model functions
-    Train = @(     X) DecTreeTrain  (     X, features, outarg, minpar_hist(i)); % 1 stands for first order reg
-    Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
-    
-    % check best model
-    [Egen_hist(i), ~] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
-     
-    % new minpar
-    minpar_hist(i+1) = round(minpar_hist(i)*alpha);
-    
-    % status update
-    disp(i)
-    disp(Egen_hist(i))
-    
-    % stopping criterium
-    if i > strikes && sum(Egen_hist(i-strikes) - Egen_hist(i-strikes+1:i) < errortolerance * ones(1,strikes)) == strikes
-        % this means that for strikes iterations already no improvements 
-        minpar = minpar_hist(i-strikes);
-        Egen   = Egen_hist(i-strikes);
-        break;
+
+for sc = 1:length(splc)
+    i = 1;
+    while true    
+        % model functions
+        Train = @(     X) DecTreeTrain  (     X, features, outarg, minpar_hist(sc,i), splc{sc}); % 1 stands for first order reg
+        Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
+
+        % check best model
+        [Egen_hist(sc,i), ~] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+
+        % new minpar
+        minpar_hist(sc, i+1) = round(minpar_hist(sc,i)*alpha);
+
+        % status update
+        disp(i)
+        disp(Egen_hist(i))
+
+        % stopping criterium
+        if i > strikes && sum(Egen_hist(sc,i-strikes) - Egen_hist(sc,i-strikes+1:i) < errortolerance * ones(1,strikes)) == strikes
+            % this means that for strikes iterations already no improvements 
+            minpar(sc) = minpar_hist(sc,i-strikes);
+            Egen(sc)   = Egen_hist(sc,i-strikes);
+            break;
+        end
+
+        % counting
+        i = i + 1;
+
     end
     
-    % counting
-    i = i + 1;
-       
 end
-
+%%
+minpar_temp=6;
+  Train = @(     X) DecTreeTrain  (     X, features, outarg, minpar_temp, 'gdi'); % 1 stands for first order reg
+       Exe   = @(par, X) DecTreeExecute(par, X, features, outarg);
+ [~,~, Etest] = crossvalidate(X, {Train}, {Exe}, L, outarg, outer_train_cell, inner_train_cell);
+%%
 figure('Name', 'Generalization Error')
-plot(minpar_hist(1:end-1),Egen_hist)
+hold on
+    plot(minpar_hist(1,1:end-5),Egen_hist(1,1:end-4), 'LineWidth', 1.5)
+    plot(minpar_hist(2,1:end-5),Egen_hist(2,1:end-4),':', 'LineWidth', 1.5)
+    plot(minpar_hist(3,1:end-5),Egen_hist(3,1:end-4),'--', 'LineWidth', 1.5)
+legend('Ginis diversity index','Twoing rule', 'Cross entropy')
+hold off
 title('Generalization error of Decision tree')
 xlabel('Parameter: Minimum parents')
 ylabel('Generalization error')
 grid on
 set(gca, 'XDir','reverse')
+saveas(gcf,'DecTree_genErr','epsc')
 
+%%
 % return tree
-outtree = DecTreeTrain  (X, features, outarg, minpar);
+%outtree = DecTreeTrain  (X, features, outarg, minpar, splc);
 
 %% output
 
 disp(' ')
 disp('|----- Calculations finished -----|')
-disp(' ')
-disp(strcat('Best minimum parents level: ', mat2str(minpar)))
-disp(' ')
-disp(strcat('Estimated generalisation error: ', num2str(Egen)))
-disp(' ')
+for i = 1:length(splc)
+    disp(strcat('Method: ', string(splc(i))))
+    disp(strcat('Best minimum parents level: ', mat2str(minpar(i))))
+    disp(' ')
+    disp(strcat('Estimated generalisation error: ', num2str(Egen(i))))
+    disp(' ')
+end
 
 %% logistic loss function
 
