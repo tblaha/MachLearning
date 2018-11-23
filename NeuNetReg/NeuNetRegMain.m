@@ -50,7 +50,7 @@ features = [2 3 4 5 6 7 8];
 
 % don't do feature selection, just take all. Instead, do complexity control
 hmax = 14;
-hes = 3;
+hes = 2:3;
 %hes = 0;
 
 Train = cell(length(hes), 1);
