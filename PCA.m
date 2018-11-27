@@ -4,9 +4,7 @@ close all
 
 
 %%
-importdata_Report1
-
-
+importdata_Report1;
 
 %% linear algebra
 [~,D_raw] = eig((X-mean(X))'*(X-mean(X))); % raw eigenvalues from the var-covar matrix
