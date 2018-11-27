@@ -57,8 +57,8 @@ for i = 1:size(z,1)
         h = area( xarea, psarea, 'LineStyle', 'none'); % for fancyness
         h(1).FaceColor = [0 0.447 0.741];
         % p value annotation
-        an_x = (-x(1)+0.15) / (-x(1)+x(end)+0.3);
-        annotation( 'textarrow', [0.375 an_x], [0.3 0.1175], 'String', strcat({'p-value = '}, num2str(pval_meanlargerzero, 3)), 'FontSize', 16)
+        an_x = (-x(1)+0.075) / (-x(1)+x(end)+0.3);
+        annotation( 'textarrow', [0.3 an_x], [0.3 0.1175], 'String', strcat({'p-value = '}, num2str(pval_meanlargerzero, 3)), 'FontSize', 16)
     hold off
     xlim([-0.05, zU + fac*ran])
     legend({'p( E^g_A-E^g_B | (E^t_A-E^t_B)_k )', strcat('z_L and z_U (\alpha = ', num2str(alpha) ,')')}, 'Location', 'NorthWest', 'FontSize', 16)
