@@ -1,31 +1,49 @@
-%%KNN Density
-x = linspace(-2, 2, 50)';
-%mfig('Histogram'); clf;
-hist(X);
-%%
-% Number of neighbors
-K = 10;
+%import data
 
-% x-values to evaluate the GMM
-x = ones(100,6);
-x = reshape(-3:3,100,6)
+if(version()==('9.5.0.944444 (R2018b)'))
+    %data=load('XoneoutofK.mat');
+    data=load('X.mat');
+    X=data.X;
+    %datann=load('Xnn.mat'); % not normalizes values
+    %Xnn=datann.Xnn;
+else
+    %run(importdata_Report2.m); %For K out of N
+    run(importdata_Report1.m); %For K
+end
+
+% Number of neighbors
+K = 5;
+
+
+% y-values to evaluate the GMM
+Y = X(300:end,:);
 
 % Find the k nearest neighbors
-[i,D] = knnsearch(X, x, 'K', K);
+[i,D] = knnsearch(X, X, 'K', K+1);
 
 % Compute the density
 density = 1./(sum(D,2)/K);
 
-% Plot KNN estimate of density
-%mfig('KNN density'); clf;
-plot(x, density);
-%%
+[y,id]=sort(density);
+
+mfig('Y'); clf;
+bar(y(1:20))
+
 % Compute the average relative density
+
 [iX,DX] = knnsearch(X, X, 'K', K+1);
 densityX= 1./(sum(DX(:,2:end),2)/K);
-avg_rel_density=density./(sum(densityX(i(:,2:end)),2)/K);
+avg_rel_density=densityX./(sum(densityX(i(:,2:end)),2)/K);
 
+[y_avg,id_avg]=sort(avg_rel_density);
+
+mfig('Y_avg'); clf;
+bar(y_avg(1:20))
 
 % Plot KNN estimate of density
-mfig('KNN average relative density'); clf;
-plot(x, avg_rel_density);
+%mfig('KNN density'); clf;
+%plot(density);
+
+% Plot KNN estimate of density
+%mfig('KNN average relative density'); clf;
+%plot(avg_rel_density);
