@@ -1,13 +1,9 @@
 %% Association Mining
 clc;clear;
-if(version()==('9.5.0.944444 (R2018b)'))
-    data=load('XoneoutofK.mat');
-    %data=load('X.mat');
-    X=data.X;
-else
-    run(importdata_Report2.m); %For K out of N
-    %run(importdata_Report1.m); %For K
-end
+
+data=load('XoneoutofK.mat');
+%data=load('X.mat');
+X=data.X;
 attributeNames1={'gpm'};
 attributeNames2={'displacement', 'horsepower', 'weight', 'accelleration', 'year',};
 attributeNames3={'3 cylinders','4 cylinders','5 cylinders','6 cylinders','8 cylinders'};
@@ -44,8 +40,8 @@ end
 Xbin=[Xbin1,X_cylinders,Xbin2,X(:,8:10)];
 attributeNamesBin=[attributeNamesBin1,attributeNames3,attributeNamesBin2,attributeNames4];
 %%
-minSup = 0.3; % minimum support
-minConf = 0.9; % minmum confidence
+minSup = 0.32; % minimum support
+minConf = 1; % minmum confidence
 nRules = 100; % Max rules
 sortFlag = 1; % sorting of found rules (see doc)
 [rules, ~] = findRules(Xbin, minSup, minConf, nRules, sortFlag);
